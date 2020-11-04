@@ -11,6 +11,7 @@ class Checkbox extends InputAbstract
 
     /**
      * radio option.
+     *
      * @var Collection
      */
     public $options;
