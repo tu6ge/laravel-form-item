@@ -4,8 +4,6 @@ namespace LaravelFormItem\View\Components;
 
 use Illuminate\Support\Collection;
 use LaravelFormItem\Traits\Option;
-use PascalDeVink\ShortUuid\ShortUuid;
-use Ramsey\Uuid\Uuid;
 
 class Cascader extends InputAbstract
 {

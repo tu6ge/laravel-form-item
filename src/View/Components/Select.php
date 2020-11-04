@@ -4,8 +4,6 @@ namespace LaravelFormItem\View\Components;
 
 use Illuminate\Support\Collection;
 use LaravelFormItem\Traits\Option;
-use PascalDeVink\ShortUuid\ShortUuid;
-use Ramsey\Uuid\Uuid;
 
 class Select extends InputAbstract
 {
@@ -13,6 +11,7 @@ class Select extends InputAbstract
 
     /**
      * radio option.
+     *
      * @var Collection
      */
     public $options;
