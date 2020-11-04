@@ -2,8 +2,8 @@
 
 namespace LaravelFormItem\Traits;
 
+use Illuminate\Support\Collection;
 use InvalidArgumentException;
-use mysql_xdevapi\Collection;
 
 trait Option
 {
@@ -47,6 +47,7 @@ trait Option
      * update text attribute to label.
      *
      * @param $options
+     *
      * @return Collection
      */
     protected function convertOptions($options)
@@ -56,8 +57,10 @@ trait Option
             if (!empty($item['children'])) {
                 $item['children'] = $this->convertOptions($item['children']);
             }
+
             return $item;
         });
+
         return $options;
     }
 }

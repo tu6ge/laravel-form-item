@@ -2,9 +2,9 @@
 
 namespace LaravelFormItem\View\Components;
 
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
-use Illuminate\Support\Collection;
 use LaravelFormItem\Traits\Option;
 
 class Cascader extends InputAbstract
