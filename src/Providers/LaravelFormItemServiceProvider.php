@@ -18,6 +18,9 @@ class LaravelFormItemServiceProvider extends ServiceProvider
 {
     public function register()
     {
+        $this->mergeConfigFrom(
+            __DIR__.'/../../config/form_item.php', 'form_item'
+        );
     }
 
     public function boot()
@@ -36,5 +39,9 @@ class LaravelFormItemServiceProvider extends ServiceProvider
         ]);
 
         $this->loadViewsFrom(__DIR__.'/../../resources/views', 'input');
+
+        $this->publishes([
+            __DIR__.'/../../config/form_item.php' => config_path('form_item.php'),
+        ]);
     }
 }
