@@ -1,0 +1,36 @@
+{
+    "name": "tu6ge/laravel-form-item",
+    "description": "laravel form item",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tu6ge",
+            "email": "772364230@qq.com"
+        }
+    ],
+    "require": {
+        "pascaldevink/shortuuid": "^2.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.4",
+        "laravel/framework": "^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelFormItem\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelFormItem\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelFormItem\\Providers\\LaravelFormItemServiceProvider"
+            ]
+        }
+    }
+}
