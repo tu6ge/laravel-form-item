@@ -32,5 +32,8 @@
                 "LaravelFormItem\\Providers\\LaravelFormItemServiceProvider"
             ]
         }
+    },
+    "scripts": {
+        "test": "phpunit"
     }
 }

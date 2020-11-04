@@ -19,7 +19,8 @@ class LaravelFormItemServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../../config/form_item.php', 'form_item'
+            __DIR__.'/../../config/form_item.php',
+            'form_item'
         );
     }
 

@@ -20,4 +20,10 @@ return [
      * If your page is already import element-ui.js ,you should set this value is null.
      */
     'element_ui_js' => '//unpkg.zhimg.com/element-ui/lib/index.js',
+
+    /**
+     * import axios js
+     * If your page is already import axios.js ,you should set this value is null.
+     */
+    'axios_url' => '//unpkg.zhimg.com/axios/dist/axios.min.js',
 ];
