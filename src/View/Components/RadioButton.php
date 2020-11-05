@@ -2,9 +2,6 @@
 
 namespace LaravelFormItem\View\Components;
 
-use Illuminate\Support\Collection;
-use LaravelFormItem\Traits\Option;
-
 class RadioButton extends Radio
 {
     public function __construct($name, $value = null, $id = null, $options, $size = '', $appendElProp = '')

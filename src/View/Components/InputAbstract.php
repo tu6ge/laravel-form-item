@@ -37,7 +37,7 @@ abstract class InputAbstract extends Component
     public string $type = '';
 
     /**
-     * append to Element UI component prop
+     * append to Element UI component prop.
      *
      * @var string
      */
