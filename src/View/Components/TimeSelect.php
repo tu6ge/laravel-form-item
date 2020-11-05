@@ -5,7 +5,7 @@ namespace LaravelFormItem\View\Components;
 class TimeSelect extends InputAbstract
 {
     /**
-     * set default value format ,eg: hh:mm:ss
+     * set default value format ,eg: hh:mm:ss .
      *
      * @var string
      */
