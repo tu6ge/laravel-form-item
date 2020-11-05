@@ -5,13 +5,17 @@ namespace LaravelFormItem\Providers;
 use Illuminate\Support\ServiceProvider;
 use LaravelFormItem\View\Components\Cascader;
 use LaravelFormItem\View\Components\Checkbox;
+use LaravelFormItem\View\Components\CheckboxButton;
 use LaravelFormItem\View\Components\DatePicker;
 use LaravelFormItem\View\Components\Number;
 use LaravelFormItem\View\Components\Radio;
+use LaravelFormItem\View\Components\RadioButton;
 use LaravelFormItem\View\Components\Select;
+use LaravelFormItem\View\Components\SelectGroup;
 use LaravelFormItem\View\Components\Slider;
 use LaravelFormItem\View\Components\Switcher;
 use LaravelFormItem\View\Components\Text;
+use LaravelFormItem\View\Components\TimeRange;
 use LaravelFormItem\View\Components\TimeSelect;
 
 class LaravelFormItemServiceProvider extends ServiceProvider
@@ -29,13 +33,17 @@ class LaravelFormItemServiceProvider extends ServiceProvider
         $this->loadViewComponentsAs('input', [
             Cascader::class,
             Checkbox::class,
+            CheckboxButton::class,
             DatePicker::class,
             Number::class,
             Radio::class,
+            RadioButton::class,
             Select::class,
+            SelectGroup::class,
             Slider::class,
             Switcher::class,
             Text::class,
+            TimeRange::class,
             TimeSelect::class,
         ]);
 

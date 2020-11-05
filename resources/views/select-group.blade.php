@@ -2,7 +2,11 @@
 <div id="{{$id}}" >
     <el-select v-model="value" {{$append_el_prop}}>
         @foreach($options as $item)
-        <el-option :value='@json($item['value'])' label="{{$item['text']}}" {{$item['prop'] ?? ''}}></el-option>
+        <el-option-group label="{{$item['text']}}" {{$item['prop'] ?? ''}}>
+            @foreach($item['children'] as $it)
+            <el-option :value='@json($it['value'])' label="{{$it['text']}}" {{$it['prop'] ?? ''}}></el-option>
+            @endforeach
+        </el-option-group>
         @endforeach
     </el-select>
     <input type="hidden" name="{{$name}}" v-model="value" />

@@ -2,7 +2,7 @@
 
 namespace LaravelFormItem\View\Components;
 
-class TimeSelect extends InputAbstract
+class TimeRange extends InputAbstract
 {
     /**
      * set default value format ,eg: hh:mm:ss
@@ -12,7 +12,7 @@ class TimeSelect extends InputAbstract
     public string $format = '';
 
     /**
-     * set element UI component picker-options.
+     * set element UI component time-picker picker_options.
      *
      * @var array
      */
@@ -21,13 +21,16 @@ class TimeSelect extends InputAbstract
     public function __construct(
         $name,
         $id = null,
-        $value = '',
+        $value = [],
+        $format = 'hh:mm:ss',
         $pickerOptions = [],
         $appendElProp = ''
     ) {
         $this->name = $name;
 
         $this->value = $value;
+
+        $this->format = $format;
 
         $this->picker_options = $pickerOptions;
 
@@ -40,6 +43,6 @@ class TimeSelect extends InputAbstract
 
     public function render()
     {
-        return view('input::time-select');
+        return view('input::time-range');
     }
 }

@@ -63,4 +63,21 @@ trait Option
 
         return $options;
     }
+
+    protected function formatSelectGroupOptions($options)
+    {
+        if (empty($options)) {
+            throw new InvalidArgumentException('select group option is null');
+        }
+        $options = is_array($options) ? collect($options) : $options;
+
+        $check_item = $options->every(function ($item) {
+            return isset($item['text']) && isset($item['children']);
+        });
+        if ($check_item == false) {
+            throw new InvalidArgumentException('select group option Collection is must have "text" and "children" property');
+        }
+
+        return $options;
+    }
 }

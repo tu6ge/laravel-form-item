@@ -1,8 +1,8 @@
 
 <div id="{{$id}}" >
-    <el-checkbox-group v-model="value">
+    <el-checkbox-group v-model="value" {{$append_el_prop}}>
         @foreach($options as $item)
-        <el-checkbox :label='@json($item['value'])'>{{$item['text']}}</el-checkbox>
+        <el-checkbox :label='@json($item['value'])' {{$item['prop'] ?? ''}}>{{$item['text']}}</el-checkbox>
         @endforeach
     </el-checkbox-group>
     <input type="hidden" name="{{$name}}" v-model="value" />

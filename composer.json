@@ -34,6 +34,7 @@
         }
     },
     "scripts": {
-        "test": "phpunit"
+        "test": "phpunit",
+        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
     }
 }

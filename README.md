@@ -8,3 +8,4 @@ developmenting
 由于 laravel 开放的 api 中无法判断开发者是否启用了某个 `@stack` ，这个功能延期处理
 2. 文档中，级联菜单的数据源，必须设置 `leaf` 字段，声明这个是否是叶子节点，
 可以设置 `disabled` 声明节点是否被禁用
+3. element 本地化设置，影响到了 `date-picker`

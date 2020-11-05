@@ -26,4 +26,22 @@ return [
      * If your page is already import axios.js ,you should set this value is null.
      */
     'axios_url' => '//unpkg.zhimg.com/axios/dist/axios.min.js',
+
+    /**
+     * import day.js
+     * If your page is already import day.js ,you should set this value is null.
+     */
+    'day_js' => '//unpkg.zhimg.com/dayjs@1.8.21/dayjs.min.js',
+
+    /**
+     * import day utc plugin
+     * If your page is already import day utc plugin ,you should set this value is null.
+     */
+    'day_utc_js' => '//unpkg.zhimg.com/dayjs@1.8.21/plugin/utc.js',
+
+    /**
+     * import day customParseFormat plugin
+     * If your page is already import day customParseFormat plugin ,you should set this value is null.
+     */
+    'day_customParseFormat_js' => '//unpkg.zhimg.com/dayjs@1.8.21/plugin/customParseFormat.js',
 ];

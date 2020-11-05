@@ -1,9 +1,9 @@
 
 <div id="{{$id}}" >
     @if($options)
-        <el-cascader v-model="value" :options='@json($options)' :props="props" {{$clearable?'clearable':''}}></el-cascader>
+        <el-cascader v-model="value" :options='@json($options)' :props="props" {{$append_el_prop}}></el-cascader>
     @else
-        <el-cascader v-model="value" :props="props" {{$clearable?'clearable':''}}></el-cascader>
+        <el-cascader v-model="value" :props="props" {{$append_el_prop}}></el-cascader>
     @endif
     <input type="hidden" name="{{$name}}" v-model="value" />
 </div>
