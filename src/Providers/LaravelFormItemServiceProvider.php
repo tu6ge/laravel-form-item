@@ -27,16 +27,16 @@ class LaravelFormItemServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadViewComponentsAs('input', [
-            Text::class,
-            Radio::class,
-            Checkbox::class,
-            Number::class,
-            Select::class,
             Cascader::class,
-            Switcher::class,
-            Slider::class,
-            TimeSelect::class,
+            Checkbox::class,
             DatePicker::class,
+            Number::class,
+            Radio::class,
+            Select::class,
+            Slider::class,
+            Switcher::class,
+            Text::class,
+            TimeSelect::class,
         ]);
 
         $this->loadViewsFrom(__DIR__.'/../../resources/views', 'input');

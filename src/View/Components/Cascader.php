@@ -23,9 +23,31 @@ class Cascader extends InputAbstract
      *
      * @string
      */
-    public $resource;
+    public string $resource;
 
-    public function __construct($name, $value = null, $id = null, $options = [], $resource = '')
+    /**
+     * There are two ways (hover or click) to expand child option items.
+     *
+     * @var string
+     */
+    public string $trigger = 'click';
+
+    /**
+     * whether selected value can be cleared.
+     *
+     * @var bool
+     */
+    public bool $clearable = false;
+
+    public function __construct(
+        $name,
+        $value = null,
+        $id = null,
+        $options = [],
+        $resource = '',
+        $trigger = '',
+        $clearable = false
+    )
     {
         $this->name = $name;
 
@@ -42,6 +64,10 @@ class Cascader extends InputAbstract
         $this->checkResource($resource);
 
         $this->resource = $resource;
+
+        $trigger && $this->trigger = $trigger;
+
+        $this->clearable = $clearable;
     }
 
     protected function checkResource($resource)

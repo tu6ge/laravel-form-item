@@ -1,9 +1,9 @@
 
 <div id="{{$id}}" >
     @if($options)
-        <el-cascader v-model="value" :options='@json($options)'></el-cascader>
+        <el-cascader v-model="value" :options='@json($options)' :props="props" {{$clearable?'clearable':''}}></el-cascader>
     @else
-        <el-cascader v-model="value" :props="props"></el-cascader>
+        <el-cascader v-model="value" :props="props" {{$clearable?'clearable':''}}></el-cascader>
     @endif
     <input type="hidden" name="{{$name}}" v-model="value" />
 </div>
@@ -22,7 +22,8 @@
             return {
                 value:@json($value),
                 props:{
-                    lazy: true,
+                    lazy: resource ? true : false,
+                    expandTrigger: @json($trigger),
                     lazyLoad (node, resolve) {
                         const { level ,value } = node;
                         let val  = value ? value: 0;
