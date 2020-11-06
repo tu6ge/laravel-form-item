@@ -35,7 +35,7 @@ Route::get('demo', function() {
 ```
 在 `demo-view` 视图文件中将 `$select1_option` 传递给 `input-radio` 组件
 ``` html
-<x-input-select name="radio1" :options="$select1_option" :value="22" ></x-input-select>
+<x-input-select name="select1" :options="$select1_option" :value="22" ></x-input-select>
 ```
 :::
 </demo-block>

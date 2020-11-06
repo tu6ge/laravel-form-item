@@ -119,7 +119,7 @@
             &.is-fixed {
                 position: fixed;
                 bottom: 0;
-                width: 868px;
+                width: 740px;
             }
             i {
                 font-size: 16px;

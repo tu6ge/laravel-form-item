@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Laravel 表单域',
     description: '一个使用 Blade 组件创建的漂亮的 laravel 的表单域',
-    base: process.env.NODE_ENV === 'production'  ? 'https://tu6ge.github.io/laravel-form-item/':'/',
+    base: process.env.NODE_ENV === 'production'  ? '/laravel-form-item/':'/',
     locales: {
         '/': {
             lang: 'zh-CN', // 将会被设置为 <html> 的 lang 属性
@@ -106,3 +106,4 @@ module.exports = {
         }
     }
 };
+

@@ -6,7 +6,7 @@
 在 php 文件中构建选项数组，要求每个数组中必须有 `value` , `text` 和 `children` ，分别表示选项的值,显示的文本
 和下级数据数组
 ::: slot source
-<el-cascader v-model="cascader1" :options="options">
+<el-cascader v-model="cascader1" :options="options1">
 </el-cascader>
 :::
 ::: slot highlight
