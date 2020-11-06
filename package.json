@@ -1,0 +1,22 @@
+{
+  "name": "laravel-form-item",
+  "version": "0.1.0",
+  "description": "laravel form item plugin",
+  "main": "index.js",
+  "repository": "git@github.com:tu6ge/laravel-form-item.git",
+  "author": "tu6ge <772364230@qq.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "cross-env": "^7.0.2",
+    "element-ui": "^2.14.0",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.0.5",
+    "vuepress": "^1.7.1"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
