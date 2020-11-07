@@ -64,6 +64,10 @@
 :::
 </demo-block>
 
+::: tip 提示
+时间范围选择器用到了前端 `dayjs` 库，以及该库的 `utc` 插件和 `customParseFormat` 插件，如果页面中已经引入了这个库或者插件，请根据 [文档](/guide/getting-started.html#自定义配置) 修改相应的配置
+:::
+
 <script>
 export default {
     data(){
