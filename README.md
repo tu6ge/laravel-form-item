@@ -11,3 +11,4 @@ developmenting
 3. element 本地化设置，影响到了 `date-picker`
 4. 在 laravel 之外使用 blade 模板引擎
 5. 计数器，可以加一个步数属性
+6. 添加单元测试
