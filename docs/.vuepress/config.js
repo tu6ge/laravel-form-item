@@ -17,6 +17,7 @@ module.exports = {
     themeConfig: {
         repo:'tu6ge/laravel-form-item',
         docsDir: 'docs',
+        editLinks: true,
         locales: {
             '/': {
                 // 多语言下拉菜单的标题
@@ -24,8 +25,7 @@ module.exports = {
                 // 该语言在下拉菜单中的标签
                 label: '简体中文',
                 ariaLabel: '选择语言',
-                editLinks: true,
-                editLinkText: '在 GitHub 上编辑此页',
+                editLinkText: '帮助我们完善此页',
                 // Service Worker 的配置
                 serviceWorker: {
                     updatePopup: {
