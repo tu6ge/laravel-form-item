@@ -10,7 +10,7 @@ trait Option
     protected function formatOptions($options)
     {
         if (empty($options)) {
-            throw new InvalidArgumentException('radio input option is null');
+            throw new InvalidArgumentException(sprintf('%s input option is null', strtolower(__CLASS__)));
         }
         $options = is_array($options) ? collect($options) : $options;
 
@@ -18,7 +18,9 @@ trait Option
             return isset($item['value']) && isset($item['text']);
         });
         if ($check_item == false) {
-            throw new InvalidArgumentException('radio option Collection is must have "value","text" property');
+            throw new InvalidArgumentException(
+                sprintf('%s option Collection is must have "value","text" property', strtolower(__CLASS__))
+            );
         }
 
         return $options;
@@ -32,10 +34,13 @@ trait Option
         $options = is_array($options) ? collect($options) : $options;
 
         $check_item = $options->every(function ($item) {
-            return isset($item['value']) && isset($item['text']) && isset($item['children']);
+            return isset($item['value']) && isset($item['text']) && isset($item['children']) && is_array($item['children']);
         });
         if ($check_item == false) {
-            throw new InvalidArgumentException('radio option Collection is must have "value","text","children" property');
+            throw new InvalidArgumentException(sprintf(
+                '%s option Collection is must have "value","text","children" property, and children must is an array',
+                strtolower(__CLASS__)
+            ));
         }
 
         $options = $this->convertOptions($options);

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="13" assertions="16" errors="0" warnings="0" failures="0" skipped="0" time="0.049593">
+    <testsuite name="Voyager Test Suite" tests="13" assertions="16" errors="0" warnings="0" failures="0" skipped="0" time="0.049593">
+      <testsuite name="LaravelFormItem\Tests\Traits\OptionTest" file="/home/tu6ge/php/laravel-form-item/tests/Traits/OptionTest.php" tests="13" assertions="16" errors="0" warnings="0" failures="0" skipped="0" time="0.049593">
+        <testcase name="testFormatOptionsExceptionNull" class="LaravelFormItem\Tests\Traits\OptionTest" classname="LaravelFormItem.Tests.Traits.OptionTest" file="/home/tu6ge/php/laravel-form-item/tests/Traits/OptionTest.php" line="14" assertions="2" time="0.027695"/>
+        <testcase name="testFormatOptionsExceptionAttr" class="LaravelFormItem\Tests\Traits\OptionTest" classname="LaravelFormItem.Tests.Traits.OptionTest" file="/home/tu6ge/php/laravel-form-item/tests/Traits/OptionTest.php" line="26" assertions="2" time="0.001950"/>
+        <testcase name="testFormatOptionsExceptionAttr2" class="LaravelFormItem\Tests\Traits\OptionTest" classname="LaravelFormItem.Tests.Traits.OptionTest" file="/home/tu6ge/php/laravel-form-item/tests/Traits/OptionTest.php" line="46" assertions="2" time="0.001787"/>
+        <testcase name="testFormatOptionsExceptionAttr3" class="LaravelFormItem\Tests\Traits\OptionTest" classname="LaravelFormItem.Tests.Traits.OptionTest" file="/home/tu6ge/php/laravel-form-item/tests/Traits/OptionTest.php" line="67" assertions="1" time="0.001686"/>
+        <testcase name="testFormatOptionsResult" class="LaravelFormItem\Tests\Traits\OptionTest" classname="LaravelFormItem.Tests.Traits.OptionTest" file="/home/tu6ge/php/laravel-form-item/tests/Traits/OptionTest.php" line="85" assertions="1" time="0.002060"/>
+        <testcase name="testConvertOptions" class="LaravelFormItem\Tests\Traits\OptionTest" classname="LaravelFormItem.Tests.Traits.OptionTest" file="/home/tu6ge/php/laravel-form-item/tests/Traits/OptionTest.php" line="106" assertions="1" time="0.001881"/>
+        <testcase name="testFormateCascaderOptionsEmpty" class="LaravelFormItem\Tests\Traits\OptionTest" classname="LaravelFormItem.Tests.Traits.OptionTest" file="/home/tu6ge/php/laravel-form-item/tests/Traits/OptionTest.php" line="169" assertions="1" time="0.001884"/>
+        <testcase name="testFormateCascaderOptionsException" class="LaravelFormItem\Tests\Traits\OptionTest" classname="LaravelFormItem.Tests.Traits.OptionTest" file="/home/tu6ge/php/laravel-form-item/tests/Traits/OptionTest.php" line="178" assertions="1" time="0.001791"/>
+        <testcase name="testFormateCascaderOptionsException2" class="LaravelFormItem\Tests\Traits\OptionTest" classname="LaravelFormItem.Tests.Traits.OptionTest" file="/home/tu6ge/php/laravel-form-item/tests/Traits/OptionTest.php" line="195" assertions="1" time="0.001784"/>
+        <testcase name="testFormateCascaderOptionsException3" class="LaravelFormItem\Tests\Traits\OptionTest" classname="LaravelFormItem.Tests.Traits.OptionTest" file="/home/tu6ge/php/laravel-form-item/tests/Traits/OptionTest.php" line="213" assertions="1" time="0.001755"/>
+        <testcase name="testFormateCascaderOptionsException4" class="LaravelFormItem\Tests\Traits\OptionTest" classname="LaravelFormItem.Tests.Traits.OptionTest" file="/home/tu6ge/php/laravel-form-item/tests/Traits/OptionTest.php" line="235" assertions="1" time="0.001745"/>
+        <testcase name="testFormateCascaderOptionsReturn" class="LaravelFormItem\Tests\Traits\OptionTest" classname="LaravelFormItem.Tests.Traits.OptionTest" file="/home/tu6ge/php/laravel-form-item/tests/Traits/OptionTest.php" line="257" assertions="1" time="0.001765"/>
+        <testcase name="testFormateCascaderOptionsReturn2" class="LaravelFormItem\Tests\Traits\OptionTest" classname="LaravelFormItem.Tests.Traits.OptionTest" file="/home/tu6ge/php/laravel-form-item/tests/Traits/OptionTest.php" line="297" assertions="1" time="0.001812"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
