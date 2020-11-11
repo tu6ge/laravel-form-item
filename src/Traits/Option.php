@@ -58,7 +58,7 @@ trait Option
     protected function convertOptions($options)
     {
         $options = collect($options)->map(function ($item) {
-            if(!isset($item['value']) || !isset($item['text'])){
+            if (!isset($item['value']) || !isset($item['text'])) {
                 throw new InvalidArgumentException('cascader option is must has value,text field');
             }
             $item['label'] = $item['text'];

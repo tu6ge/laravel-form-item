@@ -2,12 +2,10 @@
 
 namespace LaravelFormItem\Tests\Traits;
 
+use InvalidArgumentException;
 use LaravelFormItem\Tests\TestCase;
 use LaravelFormItem\Traits\Option;
-use InvalidArgumentException;
-use ReflectionClass;
 use ReflectionMethod;
-use ReflectionProperty;
 
 class OptionTest extends TestCase
 {
@@ -20,7 +18,6 @@ class OptionTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('bar input option is null');
         call_user_func_array($formatOptions, ['']);
-
     }
 
     public function testFormatOptionsExceptionAttr()
@@ -39,8 +36,8 @@ class OptionTest extends TestCase
                 ],
                 [
                     'value' => 2,
-                ]
-            ]
+                ],
+            ],
         ]);
     }
     public function testFormatOptionsExceptionAttr2()
@@ -55,15 +52,16 @@ class OptionTest extends TestCase
             [
                 [
                     'value' => 1,
-                    'text' => 'foo',
+                    'text'  => 'foo',
                 ],
                 [
 
-                ]
-            ]
+                ],
+            ],
         ]);
 
     }
+
     public function testFormatOptionsExceptionAttr3(){
         $fixture = app(Bar::class);
         $reflector = new ReflectionMethod(Bar::class, 'formatOptions');
@@ -78,10 +76,11 @@ class OptionTest extends TestCase
                 ],
                 [
                     'value' => 2,
-                ]
+                ],
             ])
         ]);
     }
+
     public function testFormatOptionsResult(){
         $fixture = app(Bar::class);
         $reflector = new ReflectionMethod(Bar::class, 'formatOptions');
@@ -94,10 +93,10 @@ class OptionTest extends TestCase
             [
                 'value' => 2,
                 'text'  => 'foo2',
-            ]
+            ],
         ];
         $res = call_user_func_array($formatOptions, [
-            $arr
+            $arr,
         ]);
 
         $this->assertEquals(collect($arr), $res);
@@ -118,8 +117,8 @@ class OptionTest extends TestCase
                         'label' => 'aabb',
                         'value' => 11,
                         'children' => [],
-                    ]
-                ]
+                    ],
+                ],
             ],
             [
                 'text' => 'bbb',
@@ -129,8 +128,8 @@ class OptionTest extends TestCase
                         'text' => 'ccdd',
                         'value' => 31,
                         'children' => [],
-                    ]
-                ]
+                    ],
+                ],
             ],
         ];
 
@@ -151,27 +150,27 @@ class OptionTest extends TestCase
                 'value' => 1,
                 'children' => [
                     [
-                        'text' => 'aabb',
-                        'value' => 11,
-                        'children' => [
+                        'text'      => 'aabb',
+                        'value'     => 11,
+                        'children'  => [
                             [
-                                'text' => 'bbb',
-                                'children' => [],
-                            ]
+                                'text'      => 'bbb',
+                                'children'  => [],
+                            ],
                         ],
-                    ]
-                ]
+                    ],
+                ],
             ],
             [
-                'text' => 'bbb',
-                'value' => 3,
-                'children' => [
+                'text'      => 'bbb',
+                'value'     => 3,
+                'children'  => [
                     [
-                        'text' => 'ccdd',
-                        'value' => 31,
-                        'children' => [],
-                    ]
-                ]
+                        'text'      => 'ccdd',
+                        'value'     => 31,
+                        'children'  => [],
+                    ],
+                ],
             ],
         ];
 
@@ -188,26 +187,26 @@ class OptionTest extends TestCase
 
         $option = [
             [
-                'text' => 'aaa',
-                'value' => 1,
-                'children' => [
+                'text'      => 'aaa',
+                'value'     => 1,
+                'children'  => [
                     [
-                        'text' => 'aabb',
-                        'value' => 11,
-                        'children' => [],
-                    ]
-                ]
+                        'text'      => 'aabb',
+                        'value'     => 11,
+                        'children'  => [],
+                    ],
+                ],
             ],
             [
-                'text' => 'bbb',
-                'value' => 3,
-                'children' => [
+                'text'      => 'bbb',
+                'value'     => 3,
+                'children'  => [
                     [
-                        'text' => 'ccdd',
-                        'value' => 31,
-                        'children' => [],
-                    ]
-                ]
+                        'text'      => 'ccdd',
+                        'value'     => 31,
+                        'children'  => [],
+                    ],
+                ],
             ],
         ];
 
@@ -215,29 +214,29 @@ class OptionTest extends TestCase
 
         $this->assertEquals($res_optione, collect([
             [
-                'text' => 'aaa',
-                'label' => 'aaa',
-                'value' => 1,
-                'children' => collect([
+                'text'      => 'aaa',
+                'label'     => 'aaa',
+                'value'     => 1,
+                'children'  => collect([
                     [
-                        'text' => 'aabb',
-                        'label' => 'aabb',
-                        'value' => 11,
-                        'children' => [],
-                    ]
+                        'text'      => 'aabb',
+                        'label'     => 'aabb',
+                        'value'     => 11,
+                        'children'  => [],
+                    ],
                 ])
             ],
             [
-                'text' => 'bbb',
-                'label' => 'bbb',
-                'value' => 3,
-                'children' => collect([
+                'text'      => 'bbb',
+                'label'     => 'bbb',
+                'value'     => 3,
+                'children'  => collect([
                     [
-                        'text' => 'ccdd',
-                        'label' => 'ccdd',
-                        'value' => 31,
-                        'children' => [],
-                    ]
+                        'text'      => 'ccdd',
+                        'label'     => 'ccdd',
+                        'value'     => 31,
+                        'children'  => [],
+                    ],
                 ])
             ],
         ]));
@@ -251,32 +250,32 @@ class OptionTest extends TestCase
 
         $option = [
             [
-                'text' => 'aaa',
-                'value' => 1,
-                'children' => [
+                'text'      => 'aaa',
+                'value'     => 1,
+                'children'  => [
                     [
-                        'text' => 'aabb',
-                        'value' => 11,
-                        'children' => [
+                        'text'      => 'aabb',
+                        'value'     => 11,
+                        'children'  => [
                             [
-                                'text' => 'bbb',
-                                'value' => 1233,
-                                'children' => [],
-                            ]
+                                'text'      => 'bbb',
+                                'value'     => 1233,
+                                'children'  => [],
+                            ],
                         ],
-                    ]
-                ]
+                    ],
+                ],
             ],
             [
-                'text' => 'bbb',
-                'value' => 3,
-                'children' => [
+                'text'      => 'bbb',
+                'value'     => 3,
+                'children'  => [
                     [
-                        'text' => 'ccdd',
-                        'value' => 31,
-                        'children' => [],
-                    ]
-                ]
+                        'text'      => 'ccdd',
+                        'value'     => 31,
+                        'children'  => [],
+                    ],
+                ],
             ],
         ];
 
@@ -284,36 +283,36 @@ class OptionTest extends TestCase
 
         $this->assertEquals($res_optione, collect([
             [
-                'text' => 'aaa',
-                'label' => 'aaa',
-                'value' => 1,
-                'children' => collect([
+                'text'      => 'aaa',
+                'label'     => 'aaa',
+                'value'     => 1,
+                'children'  => collect([
                     [
-                        'text' => 'aabb',
-                        'label' => 'aabb',
-                        'value' => 11,
-                        'children' => collect([
+                        'text'      => 'aabb',
+                        'label'     => 'aabb',
+                        'value'     => 11,
+                        'children'  => collect([
                             [
-                                'text' => 'bbb',
-                                'label' => 'bbb',
-                                'value' => 1233,
-                                'children' => [],
-                            ]
+                                'text'      => 'bbb',
+                                'label'     => 'bbb',
+                                'value'     => 1233,
+                                'children'  => [],
+                            ],
                         ]),
-                    ]
+                    ],
                 ])
             ],
             [
-                'text' => 'bbb',
-                'label' => 'bbb',
-                'value' => 3,
-                'children' => collect([
+                'text'      => 'bbb',
+                'label'     => 'bbb',
+                'value'     => 3,
+                'children'  => collect([
                     [
-                        'text' => 'ccdd',
-                        'label' => 'ccdd',
-                        'value' => 31,
-                        'children' => [],
-                    ]
+                        'text'      => 'ccdd',
+                        'label'     => 'ccdd',
+                        'value'     => 31,
+                        'children'  => [],
+                    ],
                 ])
             ],
         ]));
@@ -341,8 +340,8 @@ class OptionTest extends TestCase
                 [
                     'value' => 1,
                     'text'  => 'foo',
-                ]
-            ]
+                ],
+            ],
         ]);
     }
 
@@ -357,11 +356,11 @@ class OptionTest extends TestCase
         call_user_func_array($formateCascaderOptions, [
             [
                 [
-                    'value' => 1,
-                    'text'  => 'foo',
-                    'children' => 'AAA',
-                ]
-            ]
+                    'value'     => 1,
+                    'text'      => 'foo',
+                    'children'  => 'AAA',
+                ],
+            ],
         ]);
     }
 
@@ -376,15 +375,15 @@ class OptionTest extends TestCase
         call_user_func_array($formateCascaderOptions, [
             [
                 [
-                    'value' => 1,
-                    'text'  => 'foo',
-                    'children' => [],
+                    'value'     => 1,
+                    'text'      => 'foo',
+                    'children'  => [],
                 ],
                 [
-                    'value' => 1,
-                    'children' => [],
+                    'value'     => 1,
+                    'children'  => [],
                 ],
-            ]
+            ],
         ]);
     }
 
@@ -399,15 +398,15 @@ class OptionTest extends TestCase
         call_user_func_array($formateCascaderOptions, [
             [
                 [
-                    'value' => 1,
-                    'text'  => 'foo',
-                    'children' => [],
+                    'value'     => 1,
+                    'text'      => 'foo',
+                    'children'  => [],
                 ],
                 [
-                    'text' => 2,
-                    'children' => ['ADdd'],
+                    'text'      => 2,
+                    'children'  => ['ADdd'],
                 ],
-            ]
+            ],
         ]);
     }
 
@@ -419,28 +418,28 @@ class OptionTest extends TestCase
 
         $arr = [
             [
-                'value' => 1,
-                'text'  => 'foo',
-                'children' => [],
+                'value'     => 1,
+                'text'      => 'foo',
+                'children'  => [],
             ],
             [
-                'value' => 2,
-                'text' => 2,
-                'children' => [],
+                'value'     => 2,
+                'text'      => 2,
+                'children'  => [],
             ],
         ];
         $res_arr = [
             [
-                'value' => 1,
-                'text'  => 'foo',
-                'label'  => 'foo',
-                'children' => [],
+                'value'     => 1,
+                'text'      => 'foo',
+                'label'     => 'foo',
+                'children'  => [],
             ],
             [
-                'value' => 2,
-                'text' => 2,
-                'label' => 2,
-                'children' => [],
+                'value'     => 2,
+                'text'      => 2,
+                'label'     => 2,
+                'children'  => [],
             ],
         ];
         $res = call_user_func_array($formateCascaderOptions, [
@@ -448,7 +447,6 @@ class OptionTest extends TestCase
         ]);
 
         $this->assertEquals(collect($res_arr), $res);
-
     }
 
     public function testFormateCascaderOptionsReturn2()
@@ -459,37 +457,37 @@ class OptionTest extends TestCase
 
         $arr = [
             [
-                'value' => 1,
-                'text'  => 'foo',
-                'children' => [
+                'value'     => 1,
+                'text'      => 'foo',
+                'children'  => [
                     [
                         'value' => 11,
                         'text'  => 'foo1',
-                    ]
+                    ],
                 ],
             ],
             [
-                'value' => 2,
-                'text' => 2,
-                'children' => [
+                'value'     => 2,
+                'text'      => 2,
+                'children'  => [
                     [
                         'value' => 22,
                         'text'  => 'bar1',
-                    ]
+                    ],
                 ],
             ],
         ];
         $re_arr = [
             [
-                'value' => 1,
-                'text'  => 'foo',
-                'label'  => 'foo',
-                'children' => collect([
+                'value'     => 1,
+                'text'      => 'foo',
+                'label'     => 'foo',
+                'children'  => collect([
                     [
                         'value' => 11,
                         'text'  => 'foo1',
-                        'label'  => 'foo1',
-                    ]
+                        'label' => 'foo1',
+                    ],
                 ]),
             ],
             [
@@ -500,13 +498,13 @@ class OptionTest extends TestCase
                     [
                         'value' => 22,
                         'text'  => 'bar1',
-                        'label'  => 'bar1',
-                    ]
+                        'label' => 'bar1',
+                    ],
                 ]),
             ],
         ];
         $res = call_user_func_array($formateCascaderOptions, [
-            $arr
+            $arr,
         ]);
 
         $this->assertEquals($re_arr, $res->toArray());
@@ -521,7 +519,7 @@ class OptionTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('select group option is null');
         call_user_func_array($formatSelectGroupOptions, [
-            ''
+            '',
         ]);
     }
 
@@ -532,7 +530,7 @@ class OptionTest extends TestCase
         $formatSelectGroupOptions = $reflector->getClosure($fixture);
 
         $options = [
-            ''
+            '',
         ];
 
         $this->expectException(InvalidArgumentException::class);
@@ -551,7 +549,7 @@ class OptionTest extends TestCase
         $options = [
             [
                 'text' => 'aaa',
-            ]
+            ],
         ];
 
         $this->expectException(InvalidArgumentException::class);
@@ -570,13 +568,13 @@ class OptionTest extends TestCase
         $options = [
             [
                 'children' => [],
-            ]
+            ],
         ];
 
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('select group option Collection is must have "text" and "children" property');
         call_user_func_array($formatSelectGroupOptions, [
-            $options
+            $options,
         ]);
     }
 
@@ -588,15 +586,15 @@ class OptionTest extends TestCase
 
         $options = [
             [
-                'text' => 'aaa',
-                'children' => 'aaa',
-            ]
+                'text'      => 'aaa',
+                'children'  => 'aaa',
+            ],
         ];
 
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('select group option property"children" must is an array');
         call_user_func_array($formatSelectGroupOptions, [
-            $options
+            $options,
         ]);
     }
 
@@ -608,19 +606,20 @@ class OptionTest extends TestCase
 
         $options = [
             [
-                'text' => 'aaa',
-                'children' => [],
-            ]
+                'text'      => 'aaa',
+                'children'  => [],
+            ],
         ];
 
         $res = call_user_func_array($formatSelectGroupOptions, [
-            $options
+            $options,
         ]);
 
         $this->assertEquals(collect($options), $res);
     }
 }
 
-class Bar {
+class Bar
+{
     use Option;
 }
