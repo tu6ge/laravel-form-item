@@ -148,9 +148,9 @@ class OptionTest extends TestCase
 
         $option = [
             [
-                'text' => 'aaa',
-                'value' => 1,
-                'children' => [
+                'text'      => 'aaa',
+                'value'     => 1,
+                'children'  => [
                     [
                         'text'      => 'aabb',
                         'value'     => 11,
