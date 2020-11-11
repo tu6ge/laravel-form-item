@@ -51,7 +51,7 @@ class InputAbstractTest extends TestCase
 
     public function testConstructPlaceholder()
     {
-        $bar = new Bar('test_name',null, null, '', 'foo');
+        $bar = new Bar('test_name', null, null, '', 'foo');
 
         $this->assertEquals($bar->append_el_prop, ' placeholder=foo');
     }
@@ -68,7 +68,7 @@ class InputAbstractTest extends TestCase
         $bar = new Bar('test_name');
 
         $res = $bar->defaultId();
-        $this->assertEquals(strpos($res, 'input_') === 0 , true);
+        $this->assertEquals(strpos($res, 'input_') === 0, true);
 
         $res2 = $bar->defaultId();
         $this->assertNotEquals($res, $res2);

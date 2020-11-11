@@ -40,6 +40,7 @@ class OptionTest extends TestCase
             ],
         ]);
     }
+
     public function testFormatOptionsExceptionAttr2()
     {
         $fixture = app(Bar::class);
@@ -59,10 +60,10 @@ class OptionTest extends TestCase
                 ],
             ],
         ]);
-
     }
 
-    public function testFormatOptionsExceptionAttr3(){
+    public function testFormatOptionsExceptionAttr3()
+    {
         $fixture = app(Bar::class);
         $reflector = new ReflectionMethod(Bar::class, 'formatOptions');
         $formatOptions = $reflector->getClosure($fixture);
@@ -77,11 +78,12 @@ class OptionTest extends TestCase
                 [
                     'value' => 2,
                 ],
-            ])
+            ]),
         ]);
     }
 
-    public function testFormatOptionsResult(){
+    public function testFormatOptionsResult()
+    {
         $fixture = app(Bar::class);
         $reflector = new ReflectionMethod(Bar::class, 'formatOptions');
         $formatOptions = $reflector->getClosure($fixture);
@@ -110,24 +112,24 @@ class OptionTest extends TestCase
 
         $option = [
             [
-                'text' => 'aaa',
-                'value' => 1,
-                'children' => [
+                'text'      => 'aaa',
+                'value'     => 1,
+                'children'  => [
                     [
-                        'label' => 'aabb',
-                        'value' => 11,
-                        'children' => [],
+                        'label'     => 'aabb',
+                        'value'     => 11,
+                        'children'  => [],
                     ],
                 ],
             ],
             [
-                'text' => 'bbb',
-                'value' => 3,
-                'children' => [
+                'text'      => 'bbb',
+                'value'     => 3,
+                'children'  => [
                     [
-                        'text' => 'ccdd',
-                        'value' => 31,
-                        'children' => [],
+                        'text'      => 'ccdd',
+                        'value'     => 31,
+                        'children'  => [],
                     ],
                 ],
             ],
@@ -224,7 +226,7 @@ class OptionTest extends TestCase
                         'value'     => 11,
                         'children'  => [],
                     ],
-                ])
+                ]),
             ],
             [
                 'text'      => 'bbb',
@@ -237,7 +239,7 @@ class OptionTest extends TestCase
                         'value'     => 31,
                         'children'  => [],
                     ],
-                ])
+                ]),
             ],
         ]));
     }
@@ -300,7 +302,7 @@ class OptionTest extends TestCase
                             ],
                         ]),
                     ],
-                ])
+                ]),
             ],
             [
                 'text'      => 'bbb',
@@ -313,7 +315,7 @@ class OptionTest extends TestCase
                         'value'     => 31,
                         'children'  => [],
                     ],
-                ])
+                ]),
             ],
         ]));
     }
@@ -443,7 +445,7 @@ class OptionTest extends TestCase
             ],
         ];
         $res = call_user_func_array($formateCascaderOptions, [
-            $arr
+            $arr,
         ]);
 
         $this->assertEquals(collect($res_arr), $res);
@@ -491,10 +493,10 @@ class OptionTest extends TestCase
                 ]),
             ],
             [
-                'value' => 2,
-                'text' => 2,
-                'label' => 2,
-                'children' => collect([
+                'value'     => 2,
+                'text'      => 2,
+                'label'     => 2,
+                'children'  => collect([
                     [
                         'value' => 22,
                         'text'  => 'bar1',
@@ -536,7 +538,7 @@ class OptionTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('select group option Collection is must have "text" and "children" property');
         call_user_func_array($formatSelectGroupOptions, [
-            $options
+            $options,
         ]);
     }
 
@@ -555,7 +557,7 @@ class OptionTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('select group option Collection is must have "text" and "children" property');
         call_user_func_array($formatSelectGroupOptions, [
-            $options
+            $options,
         ]);
     }
 
