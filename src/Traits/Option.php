@@ -58,6 +58,9 @@ trait Option
     protected function convertOptions($options)
     {
         $options = collect($options)->map(function ($item) {
+            if(!isset($item['value']) || !isset($item['text'])){
+                throw new InvalidArgumentException('cascader option is must has value,text field');
+            }
             $item['label'] = $item['text'];
             if (!empty($item['children'])) {
                 $item['children'] = $this->convertOptions($item['children']);
@@ -81,6 +84,12 @@ trait Option
         });
         if ($check_item == false) {
             throw new InvalidArgumentException('select group option Collection is must have "text" and "children" property');
+        }
+        $check_item = $options->every(function ($item) {
+            return is_array($item['children']);
+        });
+        if ($check_item == false) {
+            throw new InvalidArgumentException('select group option property"children" must is an array');
         }
 
         return $options;
