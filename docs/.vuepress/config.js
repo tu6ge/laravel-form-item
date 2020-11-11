@@ -52,6 +52,7 @@ module.exports = {
                         title: '基础用法',   // 必要的
                         //sidebarDepth: 1,    // 可选的, 默认值是 1
                         children: [
+                            '/form/',
                             '/form/text',
                             '/form/number',
                             '/form/switcher',
