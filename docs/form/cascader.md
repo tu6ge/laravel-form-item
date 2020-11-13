@@ -155,6 +155,19 @@ Route::get('demo', function() {
 :::
 </demo-block>
 
+## 选项数组约定
+
+我们对级联选择器中用到的每一级的选项数据进行了约定，每个选项需要有如下字段：
+
+| 字段 | 是否必填 | 格式 | 说明|
+|----|----|----|---|
+| value | 必填| int 或 string | 选项的值，最终传递给 `form` 表单的数据 |
+| text | 必填|string | 选项的显示信息，用于单选框的显示 |
+| disabled | 选填 | bool | 是否禁用该选项，默认是 `false` |
+| children | 选填 | array | 该选项对应的下级选项数组，没有下级，可以为空 |
+
+
+
 <script>
 export default {
     data(){

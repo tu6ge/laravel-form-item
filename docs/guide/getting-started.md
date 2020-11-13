@@ -25,7 +25,7 @@ composer require tu6ge/laravel-form-item
 ``` bash
 php artisan vendor:publish --provider=LaravelFormItem\\Providers\\LaravelFormItemServiceProvider
 ```
-发布后，可以在项目的 `config` 目录中增加一个文件 `form_item.php`，内容：
+发布后，可以在项目的 `config` 目录中找到文件 `form_item.php`，内容如下：
 
 ```php
 <?php

@@ -27,7 +27,7 @@
 </demo-block>
 
 ::: tip
-查看 [文档](/advanced/#appendelprop) 了解更多 appendElProp 的用法 
+要了解更多 appendElProp 的用法，请查看 [高级用法](/advanced/#appendelprop)  
 :::
 
 ## 文本域
