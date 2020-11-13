@@ -32,13 +32,6 @@ class Cascader extends InputAbstract
      */
     public string $trigger = 'click';
 
-    /**
-     * whether selected value can be cleared.
-     *
-     * @var bool
-     */
-    public bool $clearable = false;
-
     public function __construct(
         $name,
         $value = null,
@@ -55,7 +48,7 @@ class Cascader extends InputAbstract
 
         $this->id = $id ?: $this->defaultId();
 
-        if (empty($options) && is_null($resource)) {
+        if (empty($options) && empty($resource)) {
             throw new InvalidArgumentException('options and resource can not be empty at the same time.');
         }
 
