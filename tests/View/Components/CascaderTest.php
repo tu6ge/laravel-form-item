@@ -38,10 +38,10 @@ class CascaderTest extends TestCase
             ->once()
             ->andReturn('rand_id');
         $options = [
-            'test_option'
+            'test_option',
         ];
         $re_options = [
-            'test_option_re'
+            'test_option_re',
         ];
         $cascader->shouldReceive('formateCascaderOptions')
             ->once()
@@ -70,7 +70,7 @@ class CascaderTest extends TestCase
             [
                 'text'      => 'foo_text',
                 'value'     => 'foo_value',
-                'children'  => []
+                'children'  => [],
             ]
         ];
 
@@ -98,28 +98,6 @@ class CascaderTest extends TestCase
         $cascader = $this->mock(Cascader::class)
             ->makePartial()
             ->shouldAllowMockingProtectedMethods();
-        $cascader->shouldReceive('defaultId')
-            ->withNoArgs()
-            ->once()
-            ->andReturn('rand_id');
-        $options = [
-            'test_option'
-        ];
-        $re_options = [
-            'test_option_re'
-        ];
-        $cascader->shouldReceive('formateCascaderOptions')
-            ->once()
-            ->with($options)
-            ->andReturn($re_options);
-
-
-        $cascader->__construct(
-            'bar_name',
-            null,
-            null,
-            $options
-        );
 
         $response = $cascader->render();
 
@@ -215,7 +193,7 @@ class CascaderTest extends TestCase
             'demo_url',
             '',
             true
-            );
+        );
 
         $this->assertEquals($cascader->append_el_prop, ' clearable');
     }
