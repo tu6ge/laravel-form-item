@@ -16,7 +16,7 @@ class SelectGroup extends InputAbstract
      */
     public $options;
 
-    public function __construct($name, $value = null, $id = null, $options, $appendElProp = '')
+    public function __construct($name, $options, $value = null, $id = null, $appendElProp = '')
     {
         $this->name = $name;
 

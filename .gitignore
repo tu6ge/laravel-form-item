@@ -4,3 +4,4 @@ composer.lock
 /node_modules
 yarn.lock
 /docs/.vuepress/dist
+.phpunit.result.cache
