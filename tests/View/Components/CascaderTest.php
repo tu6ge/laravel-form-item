@@ -48,7 +48,6 @@ class CascaderTest extends TestCase
             ->with($options)
             ->andReturn($re_options);
 
-
         $cascader->__construct(
             'bar_name',
             null,
@@ -71,7 +70,7 @@ class CascaderTest extends TestCase
                 'text'      => 'foo_text',
                 'value'     => 'foo_value',
                 'children'  => [],
-            ]
+            ],
         ];
 
         $fixture = new Cascader(
