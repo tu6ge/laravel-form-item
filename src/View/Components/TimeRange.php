@@ -5,6 +5,12 @@ namespace LaravelFormItem\View\Components;
 class TimeRange extends InputAbstract
 {
     /**
+     * input element default value.
+     *
+     * @var array
+     */
+    public array $array_value = [];
+    /**
      * set default value format ,eg: hh:mm:ss .
      *
      * @var string
@@ -16,7 +22,7 @@ class TimeRange extends InputAbstract
      *
      * @var array
      */
-    public $picker_options = [];
+    public array $picker_options = [];
 
     public function __construct(
         $name,
@@ -28,7 +34,7 @@ class TimeRange extends InputAbstract
     ) {
         $this->name = $name;
 
-        $this->value = $value;
+        $this->array_value = $value;
 
         $this->format = $format;
 

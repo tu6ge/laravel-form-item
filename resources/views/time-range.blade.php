@@ -1,7 +1,7 @@
 
 <div id="{{$id}}" >
-    <el-time-picker v-model="value" {{$append_el_prop}} :picker-options='@json($picker_options)'></el-time-picker>
-    <input type="hidden" name="{{$name}}" v-model="value" />
+    <el-time-picker v-model="value" {{$append_el_prop}} @if($picker_options):picker-options='@json($picker_options)' @endif></el-time-picker>
+    <input type="hidden" name="{{$name}}" v-model="value2" />
 </div>
 
 @include("input::include.element-ui")
@@ -13,16 +13,17 @@
         el:'#{{$id}}',
         data(){
             return {
+                value2:'',
                 value: [
-                    @if(isset($value[0]))
-                    dayjs(@json($value[0]), @json($format)).toDate(),
+                    @if(isset($array_value[0]))
+                        dayjs(@json($array_value[0]), @json($format)).toDate(),
                     @else
-                            '',
+                        dayjs().toDate(),
                     @endif
-                    @if(isset($value[1]))
-                    dayjs(@json($value[1]), @json($format)).toDate(),
+                    @if(isset($array_value[1]))
+                        dayjs(@json($array_value[1]), @json($format)).toDate(),
                     @else
-                        '',
+                        dayjs().toDate(),
                     @endif
                 ]
             };

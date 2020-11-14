@@ -5,18 +5,11 @@ namespace LaravelFormItem\View\Components;
 class TimeSelect extends InputAbstract
 {
     /**
-     * set default value format ,eg: hh:mm:ss .
-     *
-     * @var string
-     */
-    public string $format = '';
-
-    /**
      * set element UI component picker-options.
      *
      * @var array
      */
-    public $picker_options = [];
+    public array $picker_options = [];
 
     public function __construct(
         $name,
@@ -27,11 +20,11 @@ class TimeSelect extends InputAbstract
     ) {
         $this->name = $name;
 
+        $this->id = $id ?: $this->defaultId();
+
         $this->value = $value;
 
         $this->picker_options = $pickerOptions;
-
-        $this->id = $id ?: $this->defaultId();
 
         if ($appendElProp) {
             $this->addElProp($appendElProp);
