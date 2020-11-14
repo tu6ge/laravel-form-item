@@ -4,9 +4,9 @@ namespace LaravelFormItem\View\Components;
 
 class RadioButton extends Radio
 {
-    public function __construct($name, $value = null, $id = null, $options, $size = '', $appendElProp = '')
+    public function __construct($name, $options, $value = null, $id = null, $size = '', $appendElProp = '')
     {
-        parent::__construct($name, $value, $id, $options, $appendElProp = '');
+        parent::__construct($name, $options, $value, $id, $appendElProp);
 
         if ($size) {
             $this->addElProp(sprintf('size=%s', $size));

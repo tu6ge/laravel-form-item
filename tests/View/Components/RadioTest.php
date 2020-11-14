@@ -3,9 +3,9 @@
 namespace LaravelFormItem\Tests\View\Components;
 
 use LaravelFormItem\Tests\TestCase;
-use LaravelFormItem\View\Components\Checkbox;
+use LaravelFormItem\View\Components\Radio;
 
-class CheckboxTest extends TestCase
+class RadioTest extends TestCase
 {
     public function tearDown(): void
     {
@@ -16,7 +16,7 @@ class CheckboxTest extends TestCase
 
     public function testNameOption()
     {
-        $class = $this->mock(Checkbox::class)
+        $class = $this->mock(Radio::class)
             ->makePartial()
             ->shouldAllowMockingProtectedMethods();
 
@@ -41,7 +41,7 @@ class CheckboxTest extends TestCase
 
     public function testValue()
     {
-        $class = $this->mock(Checkbox::class)
+        $class = $this->mock(Radio::class)
             ->makePartial()
             ->shouldAllowMockingProtectedMethods();
 
@@ -61,7 +61,7 @@ class CheckboxTest extends TestCase
 
     public function testId()
     {
-        $class = $this->mock(Checkbox::class)
+        $class = $this->mock(Radio::class)
             ->makePartial()
             ->shouldAllowMockingProtectedMethods();
 
@@ -77,7 +77,7 @@ class CheckboxTest extends TestCase
             'bar_name',
             'foo_option',
             'bar_value',
-            'foo_id',
+            'foo_id'
         );
 
         $this->assertEquals($class->id, 'foo_id');
@@ -85,7 +85,7 @@ class CheckboxTest extends TestCase
 
     public function testAppendElProp()
     {
-        $class = $this->mock(Checkbox::class)
+        $class = $this->mock(Radio::class)
             ->makePartial()
             ->shouldAllowMockingProtectedMethods();
 
@@ -110,12 +110,12 @@ class CheckboxTest extends TestCase
 
     public function testRender()
     {
-        $class = $this->mock(Checkbox::class)
+        $class = $this->mock(Radio::class)
             ->makePartial()
             ->shouldAllowMockingProtectedMethods();
 
         $response = $class->render();
 
-        $this->assertEquals($response->name(), 'input::checkbox');
+        $this->assertEquals($response->name(), 'input::radio');
     }
 }

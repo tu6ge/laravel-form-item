@@ -18,9 +18,9 @@ class Checkbox extends InputAbstract
 
     public function __construct(
         $name,
+        $options,
         $value = null,
         $id = null,
-        $options,
         $appendElProp = ''
     ) {
         $this->name = $name;

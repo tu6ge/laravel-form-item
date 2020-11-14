@@ -3,9 +3,9 @@
 namespace LaravelFormItem\Tests\View\Components;
 
 use LaravelFormItem\Tests\TestCase;
-use LaravelFormItem\View\Components\Checkbox;
+use LaravelFormItem\View\Components\RadioButton;
 
-class CheckboxTest extends TestCase
+class RadioButtonTest extends TestCase
 {
     public function tearDown(): void
     {
@@ -16,7 +16,7 @@ class CheckboxTest extends TestCase
 
     public function testNameOption()
     {
-        $class = $this->mock(Checkbox::class)
+        $class = $this->mock(RadioButton::class)
             ->makePartial()
             ->shouldAllowMockingProtectedMethods();
 
@@ -41,7 +41,7 @@ class CheckboxTest extends TestCase
 
     public function testValue()
     {
-        $class = $this->mock(Checkbox::class)
+        $class = $this->mock(RadioButton::class)
             ->makePartial()
             ->shouldAllowMockingProtectedMethods();
 
@@ -53,7 +53,7 @@ class CheckboxTest extends TestCase
         $class->__construct(
             'bar_name',
             'foo_option',
-            'bar_value',
+            'bar_value'
         );
 
         $this->assertEquals($class->value, 'bar_value');
@@ -61,7 +61,7 @@ class CheckboxTest extends TestCase
 
     public function testId()
     {
-        $class = $this->mock(Checkbox::class)
+        $class = $this->mock(RadioButton::class)
             ->makePartial()
             ->shouldAllowMockingProtectedMethods();
 
@@ -77,15 +77,15 @@ class CheckboxTest extends TestCase
             'bar_name',
             'foo_option',
             'bar_value',
-            'foo_id',
+            'foo_id'
         );
 
         $this->assertEquals($class->id, 'foo_id');
     }
 
-    public function testAppendElProp()
+    public function testSize()
     {
-        $class = $this->mock(Checkbox::class)
+        $class = $this->mock(RadioButton::class)
             ->makePartial()
             ->shouldAllowMockingProtectedMethods();
 
@@ -102,6 +102,32 @@ class CheckboxTest extends TestCase
             'foo_option',
             'bar_value',
             null,
+            'foo_size'
+        );
+
+        $this->assertEquals($class->append_el_prop, ' size=foo_size');
+    }
+
+    public function testAppendElProp()
+    {
+        $class = $this->mock(RadioButton::class)
+            ->makePartial()
+            ->shouldAllowMockingProtectedMethods();
+
+        $class->shouldReceive('defaultId')
+            ->once();
+
+        $class->shouldReceive('formatOptions')
+            ->with('foo_option')
+            ->once()
+            ->andReturn('foo_option_new');
+
+        $class->__construct(
+            'bar_name',
+            'foo_option',
+            'bar_value',
+            null,
+            '',
             'foo_prop'
         );
 
@@ -110,12 +136,12 @@ class CheckboxTest extends TestCase
 
     public function testRender()
     {
-        $class = $this->mock(Checkbox::class)
+        $class = $this->mock(RadioButton::class)
             ->makePartial()
             ->shouldAllowMockingProtectedMethods();
 
         $response = $class->render();
 
-        $this->assertEquals($response->name(), 'input::checkbox');
+        $this->assertEquals($response->name(), 'input::radio-button');
     }
 }

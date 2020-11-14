@@ -50,17 +50,47 @@ class CascaderTest extends TestCase
 
         $cascader->__construct(
             'bar_name',
-            null,
+            'bar_value',
             null,
             $options
         );
 
         $this->assertEquals($cascader->name, 'bar_name');
-        $this->assertNull($cascader->value);
+        $this->assertEquals($cascader->value, 'bar_value');
         $this->assertEquals($cascader->id, 'rand_id');
         $this->assertEquals($cascader->options, $re_options);
         $this->assertEquals($cascader->type, '');
         $this->assertEquals($cascader->append_el_prop, '');
+    }
+
+    public function testConstructId()
+    {
+        $cascader = $this->mock(Cascader::class)
+            ->makePartial()
+            ->shouldAllowMockingProtectedMethods();
+        $cascader->shouldReceive('defaultId')
+            ->withNoArgs()
+            ->never()
+            ->andReturn('rand_id');
+        $options = [
+            'test_option',
+        ];
+        $re_options = [
+            'test_option_re',
+        ];
+        $cascader->shouldReceive('formateCascaderOptions')
+            ->once()
+            ->with($options)
+            ->andReturn($re_options);
+
+        $cascader->__construct(
+            'bar_name',
+            'bar_value',
+            'bar_id',
+            $options
+        );
+
+        $this->assertEquals($cascader->id, 'bar_id');
     }
 
     public function testCheckResource()
