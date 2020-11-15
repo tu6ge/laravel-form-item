@@ -4,7 +4,7 @@ namespace LaravelFormItem\Tests;
 
 use Orchestra\Testbench\TestCase as TestbenchTestCase;
 
-class TestCase extends TestbenchTestCase
+abstract class TestCase extends TestbenchTestCase
 {
     public function getPackageProviders($app)
     {

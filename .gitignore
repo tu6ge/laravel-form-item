@@ -5,3 +5,4 @@ composer.lock
 yarn.lock
 /docs/.vuepress/dist
 .phpunit.result.cache
+build/report.junit.xml
