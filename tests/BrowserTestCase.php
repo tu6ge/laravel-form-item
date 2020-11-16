@@ -2,8 +2,6 @@
 
 namespace LaravelFormItem\Tests;
 
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\View;
 use Orchestra\Testbench\Dusk\TestCase as DuskTestCase;
 
 abstract class BrowserTestCase extends DuskTestCase
@@ -25,7 +23,7 @@ abstract class BrowserTestCase extends DuskTestCase
     protected function getEnvironmentSetUp($app)
     {
         $app['config']->set('view.paths', [
-            __DIR__.'/resources/views'
+            __DIR__.'/resources/views',
         ]);
 
         //set routes for the testsystem
