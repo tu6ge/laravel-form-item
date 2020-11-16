@@ -38,7 +38,7 @@ Carbon::setTestNow(Carbon::now());
 \Orchestra\Testbench\Dusk\Options::withoutUI();
 
 $app = new Illuminate\Foundation\Application(
-    __DIR__ . '/../vendor/orchestra/testbench-dusk/laravel'
+    __DIR__.'/../vendor/orchestra/testbench-dusk/laravel'
 );
 
 /*

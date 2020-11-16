@@ -14,7 +14,7 @@ abstract class BrowserTestCase extends DuskTestCase
     {
         parent::setUp();
 
-        View::addLocation(__DIR__ . '/resources/views');
+        View::addLocation(__DIR__.'/resources/views');
     }
 
     protected function registerTestRoute($uri, callable $post = null): self
