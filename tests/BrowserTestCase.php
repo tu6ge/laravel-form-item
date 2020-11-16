@@ -13,20 +13,23 @@ abstract class BrowserTestCase extends DuskTestCase
     public function setUp(): void
     {
         parent::setUp();
-
-        View::addLocation(__DIR__.'/resources/views');
     }
 
-    protected function registerTestRoute($uri, callable $post = null): self
+    public function getPackageProviders($app)
     {
-        Route::middleware('web')->group(function () use ($uri, $post) {
-            Route::view($uri, $uri);
+        return [
+            'LaravelFormItem\Providers\LaravelFormItemServiceProvider',
+        ];
+    }
 
-            if ($post) {
-                Route::post($uri, $post);
-            }
-        });
+    protected function getEnvironmentSetUp($app)
+    {
+        $app['config']->set('view.paths', [
+            __DIR__.'/resources/views'
+        ]);
 
-        return $this;
+        //set routes for the testsystem
+        $app['router']->middleware('web')
+            ->group(__DIR__.'/routes.php');
     }
 }

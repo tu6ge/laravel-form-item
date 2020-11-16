@@ -38,6 +38,8 @@
     },
     "scripts": {
         "test": "phpunit",
+        "test-unit": "phpunit --testsuite=Unit",
+        "test-browser": "phpunit --testsuite=Browser",
         "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
     }
 }

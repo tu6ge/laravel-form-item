@@ -9,11 +9,12 @@ class TextTest extends BrowserTestCase
 {
     public function testIndex()
     {
-        $this->registerTestRoute('test');
+        //$this->registerTestRoute('text');
 
         $this->browse(function (Browser $browser) {
-            $browser->visit('test')
-                ->assertSee('bar_name');
+            $browser->visit('text')
+                ->click('#submit')
+                ->assertSee('"bar_name":"aaa"');
         });
     }
 }
