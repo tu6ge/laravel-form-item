@@ -21,8 +21,7 @@ class NumberTest extends BrowserTestCase
                 ->back()
                 ->click('.el-input-number__decrease')
                 ->click('#submit')
-                ->assertSee('"bar_name":"-1"')
-            ;
+                ->assertSee('"bar_name":"-1"');
         });
     }
 
