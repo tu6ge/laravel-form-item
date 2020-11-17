@@ -32,7 +32,6 @@ class TextTest extends BrowserTestCase
                 })
                 ->click('#submit-edit')
                 ->assertSee('"bar_name_edit":"aaabbb"');
-
         });
     }
 }
