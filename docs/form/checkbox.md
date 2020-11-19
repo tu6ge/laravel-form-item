@@ -44,6 +44,10 @@ Route::get('demo', function() {
 :::
 </demo-block>
 
+::: tip 提示
+提交表单后，多选框的值是一个形如 `11,22` 的字符串，请自行使用 `explode` 或其他方式转化成数组
+:::
+
 ## 禁用某些选项
 
 <demo-block>

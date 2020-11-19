@@ -10,22 +10,29 @@ class Checkbox extends InputAbstract
     use Option;
 
     /**
-     * radio option.
+     * checkbox option.
      *
      * @var Collection
      */
     public $options;
 
+    /**
+     * checkbox value.
+     *
+     * @var array
+     */
+    public array $arr_value;
+
     public function __construct(
         $name,
         $options,
-        $value = null,
+        $value = [],
         $id = null,
         $appendElProp = ''
     ) {
         $this->name = $name;
 
-        $this->value = $value;
+        $this->arr_value = $value;
 
         $this->id = $id ?: $this->defaultId();
 

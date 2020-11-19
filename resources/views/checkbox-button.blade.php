@@ -15,7 +15,7 @@
         el:'#{{$id}}',
         data(){
             return {
-                value:@json($value),
+                value:@json($arr_value),
             };
         }
     });

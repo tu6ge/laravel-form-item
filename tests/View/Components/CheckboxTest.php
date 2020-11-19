@@ -35,7 +35,7 @@ class CheckboxTest extends TestCase
 
         $this->assertEquals($class->name, 'bar_name');
         $this->assertEquals($class->options, 'foo_option_new');
-        $this->assertNull($class->value);
+        $this->assertEquals($class->arr_value, []);
         $this->assertEquals($class->append_el_prop, '');
     }
 
@@ -53,10 +53,10 @@ class CheckboxTest extends TestCase
         $class->__construct(
             'bar_name',
             'foo_option',
-            'bar_value',
+            ['bar_value'],
         );
 
-        $this->assertEquals($class->value, 'bar_value');
+        $this->assertEquals($class->arr_value, ['bar_value']);
     }
 
     public function testId()
@@ -76,7 +76,7 @@ class CheckboxTest extends TestCase
         $class->__construct(
             'bar_name',
             'foo_option',
-            'bar_value',
+            ['bar_value'],
             'foo_id',
         );
 
@@ -100,7 +100,7 @@ class CheckboxTest extends TestCase
         $class->__construct(
             'bar_name',
             'foo_option',
-            'bar_value',
+            ['bar_value'],
             null,
             'foo_prop'
         );
