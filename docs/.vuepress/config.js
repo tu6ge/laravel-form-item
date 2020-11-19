@@ -99,50 +99,50 @@ module.exports = {
                 nav: [
                     { text: 'Guide', link: '/en/guide/', ariaLabel: 'Guide' }
                 ],
-                sidebar: [
-                    {
-                        title: 'Guide',   // 必要的
-                        //sidebarDepth: 1,    // 可选的, 默认值是 1
-                        children: [
-                            '/en/guide/',
-                            '/en/guide/getting-started',
-                        ]
-                    },
-                    {
-                        title: 'Form Item',   // 必要的
-                        //sidebarDepth: 1,    // 可选的, 默认值是 1
-                        children: [
-                            '/en/form/',
-                            '/en/form/text',
-                            '/en/form/number',
-                            '/en/form/switcher',
-                            '/en/form/slider',
-                            '/en/form/radio',
-                            '/en/form/checkbox',
-                            '/en/form/select',
-                            '/en/form/cascader',
-                            '/en/form/time',
-                            '/en/form/date-picker',
-                        ]
-                    },
-                    {
-                        title: 'Advanced',   // 必要的
-                        //sidebarDepth: 1,    // 可选的, 默认值是 1
-                        children: [
-                            '/en/advanced/',
-                            '/en/advanced/text',
-                            '/en/advanced/number',
-                            '/en/advanced/switcher',
-                            '/en/advanced/slider',
-                            '/en/advanced/radio',
-                            '/en/advanced/checkbox',
-                            '/en/advanced/select',
-                            '/en/advanced/cascader',
-                            '/en/advanced/time',
-                            '/en/advanced/date-picker',
-                        ]
-                    },
-                ]
+                // sidebar: [
+                //     {
+                //         title: 'Guide',   // 必要的
+                //         //sidebarDepth: 1,    // 可选的, 默认值是 1
+                //         children: [
+                //             '/en/guide/',
+                //             '/en/guide/getting-started',
+                //         ]
+                //     },
+                //     {
+                //         title: 'Form Item',   // 必要的
+                //         //sidebarDepth: 1,    // 可选的, 默认值是 1
+                //         children: [
+                //             '/en/form/',
+                //             '/en/form/text',
+                //             '/en/form/number',
+                //             '/en/form/switcher',
+                //             '/en/form/slider',
+                //             '/en/form/radio',
+                //             '/en/form/checkbox',
+                //             '/en/form/select',
+                //             '/en/form/cascader',
+                //             '/en/form/time',
+                //             '/en/form/date-picker',
+                //         ]
+                //     },
+                //     {
+                //         title: 'Advanced',   // 必要的
+                //         //sidebarDepth: 1,    // 可选的, 默认值是 1
+                //         children: [
+                //             '/en/advanced/',
+                //             '/en/advanced/text',
+                //             '/en/advanced/number',
+                //             '/en/advanced/switcher',
+                //             '/en/advanced/slider',
+                //             '/en/advanced/radio',
+                //             '/en/advanced/checkbox',
+                //             '/en/advanced/select',
+                //             '/en/advanced/cascader',
+                //             '/en/advanced/time',
+                //             '/en/advanced/date-picker',
+                //         ]
+                //     },
+                // ]
             }
         }
     }
