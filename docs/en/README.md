@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: Laravel Form Item
-tagline: one plugin of set form item to strong
+tagline: a plugin of set form item to strong
 actionText: Guide →
 actionLink: /en/**guide/
 features:
