@@ -35,7 +35,7 @@ class CheckboxButtonTest extends BrowserTestCase
                 ->click('#submit-edit')
                 ->assertSee('"bar_name_edit":"23"')
                 ->back()
-                ->refresh()   // todo 提交表单返回页面，不能正确渲染
+                //->refresh()   // todo 提交表单返回页面，不能正确渲染
                 ->with('@second-form', function ($table) {
                     $table->click('.el-checkbox-group .el-checkbox-button:nth-child(2)');
                 })
