@@ -1,6 +1,6 @@
 
 <div id="{{$id}}" >
-    <el-date-picker v-model="value" type="{{$type}}" {{$append_el_prop}}></el-date-picker>
+    <el-date-picker v-model="value" type="{{$type}}" {{$append_el_prop}} {{ $attributes }}></el-date-picker>
     <input type="hidden" name="{{$name}}" v-model="value" />
 </div>
 
