@@ -2,7 +2,6 @@
 
 namespace LaravelFormItem\Tests\Browser;
 
-use Carbon\Carbon;
 use Laravel\Dusk\Browser;
 use LaravelFormItem\Tests\BrowserTestCase;
 

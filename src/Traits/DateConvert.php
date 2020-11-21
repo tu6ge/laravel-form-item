@@ -9,6 +9,7 @@ trait DateConvert
      * links:https://element.eleme.cn/#/en-US/component/date-picker#date-formats.
      *
      * @param $format
+     *
      * @return string|string[]|null
      */
     public function elementUI2PHP($format)
@@ -21,6 +22,7 @@ trait DateConvert
      * PHP format convert to ElementUI date format.
      *
      * @param $format
+     *
      * @return string|string[]|null
      */
     public function PHP2ElementUI($format)
