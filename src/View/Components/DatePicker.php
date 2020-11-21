@@ -9,27 +9,27 @@ class DatePicker extends InputAbstract
 {
     use DateConvert;
 
-    public string $php_value_format = '';
-
-    public string $value_format = '';
+//    public string $php_value_format = '';
+//
+//    public string $value_format = '';
 
     public function __construct(
         $name,
-        $value = '',
+        //$value = '',
         $id = null,
         $type = 'date',
-        $valueFormat = 'yyyy-MM-dd',
+        //$valueFormat = 'yyyy-MM-dd',
         $appendElProp = ''
     ) {
         $this->name = $name;
 
-        $this->value_format = $valueFormat;
+        //$this->value_format = $valueFormat;
 
-        $this->php_value_format = $this->elementUI2PHP($valueFormat);
+        //$this->php_value_format = $this->elementUI2PHP($valueFormat);
 
-        if (!empty($value)) {
-            $this->value = Carbon::createFromFormat($this->php_value_format, $value)->toIso8601String();
-        }
+//        if (!empty($value)) {
+//            $this->value = Carbon::createFromFormat($this->php_value_format, $value)->toIso8601String();
+//        }
 
         $this->id = $id ?: $this->defaultId();
 
