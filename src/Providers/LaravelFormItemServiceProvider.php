@@ -26,6 +26,10 @@ class LaravelFormItemServiceProvider extends ServiceProvider
             __DIR__.'/../../config/form_item.php',
             'form_item'
         );
+//        // todo delay datepicker
+//        $this->publishes([
+//            __DIR__.'/../../public/js/app.js' => public_path('vendor/laravel-form-item/app.js'),
+//        ], 'public');
     }
 
     public function boot()
@@ -34,7 +38,7 @@ class LaravelFormItemServiceProvider extends ServiceProvider
             Cascader::class,
             Checkbox::class,
             CheckboxButton::class,
-            DatePicker::class,
+            DatePicker::class, // todo delay datepicker
             Number::class,
             Radio::class,
             RadioButton::class,

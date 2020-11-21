@@ -6,14 +6,14 @@
 <body>
     <form method="POST" action="form_action">
         {{ csrf_field() }}
-        <x-input-slider name="bar_name" ></x-input-slider>
+        <x-input-time-range name="bar_name" ></x-input-time-range>
         <button type="submit" id="submit">submit</button>
     </form>
 
     <form method="POST" action="form_action" >
         {{ csrf_field() }}
         <div dusk="second-form">
-            <x-input-slider name="bar_name_edit" :value="11"></x-input-slider>
+            <x-input-time-range name="bar_name_edit" :value="['12:11:34','14:22:33']"></x-input-time-range>
         </div>
         <button type="submit" id="submit-edit">submit</button>
     </form>

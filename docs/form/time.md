@@ -47,7 +47,7 @@
 ::: slot highlight
 
 ``` html
-<x-input-time-range name="time_select3" appendElProp="is-range" ></x-input-time-range>
+<x-input-time-range name="time_select3" ></x-input-time-range>
 ```
 :::
 </demo-block>
@@ -63,7 +63,7 @@
 ::: slot highlight
 
 ``` html
-<x-input-time-range name="time_select4" appendElProp="is-range" :value='["08:40:15","09:40:55"]'></x-input-time-range>
+<x-input-time-range name="time_select4" :value='["08:40:15","09:40:55"]'></x-input-time-range>
 ```
 :::
 </demo-block>

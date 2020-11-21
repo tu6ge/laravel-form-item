@@ -11,7 +11,7 @@
         el:'#{{$id}}',
         data(){
             return {
-                value:@json($value),
+                value:@json($value ? true : false),
             };
         }
     });

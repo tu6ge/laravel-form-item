@@ -5,33 +5,33 @@ namespace LaravelFormItem\Tests\Browser;
 use Laravel\Dusk\Browser;
 use LaravelFormItem\Tests\BrowserTestCase;
 
-class SliderTest extends BrowserTestCase
+class SwitcherTest extends BrowserTestCase
 {
     public function testAdd()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('slider')
+            $browser->visit('switcher')
                 ->click('#submit')
-                ->assertSee('"bar_name":"0"')
+                ->assertSee('"bar_name":"false"')
                 ->back()
-                ->dragRight('.el-slider__button', 100)
+                ->click('.el-switch:first-child')
                 ->click('#submit')
-                ->assertSee('"bar_name":"13"');
+                ->assertSee('"bar_name":"true"');
         });
     }
 
     public function testEdit()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('slider')
+            $browser->visit('switcher')
                 ->click('#submit-edit')
-                ->assertSee('"bar_name_edit":"11"')
+                ->assertSee('"bar_name_edit":"true"')
                 ->back()
                 ->with('@second-form', function ($table) {
-                    $table->dragRight('.el-slider__button', 100);
+                    $table->click('.el-switch');
                 })
                 ->click('#submit-edit')
-                ->assertSee('"bar_name_edit":"24"');
+                ->assertSee('"bar_name_edit":"false"');
         });
     }
 }

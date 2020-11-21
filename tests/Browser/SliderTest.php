@@ -5,41 +5,33 @@ namespace LaravelFormItem\Tests\Browser;
 use Laravel\Dusk\Browser;
 use LaravelFormItem\Tests\BrowserTestCase;
 
-class CheckboxTest extends BrowserTestCase
+class SliderTest extends BrowserTestCase
 {
     public function testAdd()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('checkbox')
+            $browser->visit('slider')
                 ->click('#submit')
-                ->assertSee('"bar_name":null')
+                ->assertSee('"bar_name":"0"')
                 ->back()
-                ->click('.el-checkbox-group:first-child .el-checkbox:nth-child(1)')
-                ->click('.el-checkbox-group:first-child .el-checkbox:nth-child(2)')
+                ->dragRight('.el-slider__button', 100)
                 ->click('#submit')
-                ->assertSee('"bar_name":"11,22"');
+                ->assertSee('"bar_name":"13"');
         });
     }
 
     public function testEdit()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('checkbox')
+            $browser->visit('slider')
                 ->click('#submit-edit')
-                ->assertSee('"bar_name_edit":"22"')
+                ->assertSee('"bar_name_edit":"11"')
                 ->back()
                 ->with('@second-form', function ($table) {
-                    $table->click('.el-checkbox-group:first-child .el-checkbox:nth-child(3)');
+                    $table->dragRight('.el-slider__button', 100);
                 })
                 ->click('#submit-edit')
-                ->assertSee('"bar_name_edit":"22,23"')
-                ->back()
-                ->with('@second-form', function ($table) {
-                    $table->click('.el-checkbox-group:first-child .el-checkbox:nth-child(2)');
-                    $table->click('.el-checkbox-group:first-child .el-checkbox:nth-child(3)');
-                })
-                ->click('#submit-edit')
-                ->assertSee('"bar_name_edit":null');
+                ->assertSee('"bar_name_edit":"24"');
         });
     }
 }
