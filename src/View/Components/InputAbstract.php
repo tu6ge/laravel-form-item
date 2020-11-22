@@ -36,14 +36,7 @@ abstract class InputAbstract extends Component
      */
     public string $type = '';
 
-    /**
-     * append to Element UI component prop.
-     *
-     * @var string
-     */
-    public string $append_el_prop = '';
-
-    public function __construct($name, $value = null, $id = null, $type = '', $placeholder = '', $appendElProp = '')
+    public function __construct($name, $value = null, $id = null, $type = '')
     {
         $this->name = $name;
 
@@ -52,14 +45,6 @@ abstract class InputAbstract extends Component
         $this->id = $id ?: $this->defaultId();
 
         $this->type = $type;
-
-        if ($placeholder) {
-            $this->addElProp(sprintf('placeholder=%s', $placeholder));
-        }
-
-        if ($appendElProp) {
-            $this->addElProp($appendElProp);
-        }
     }
 
     public function defaultId()
@@ -70,10 +55,5 @@ abstract class InputAbstract extends Component
     public function render()
     {
         return view(sprintf('input::%s', strtolower(static::class)));
-    }
-
-    public function addElProp($prop)
-    {
-        $this->append_el_prop .= sprintf(' %s', $prop);
     }
 }

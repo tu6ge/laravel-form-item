@@ -1,6 +1,6 @@
 
 <div id="{{$id}}" >
-    <el-slider v-model="value" {{$append_el_prop}}></el-slider>
+    <el-slider v-model="value" {{ $attributes }}></el-slider>
     <input type="hidden" name="{{$name}}" v-model="value" />
 </div>
 

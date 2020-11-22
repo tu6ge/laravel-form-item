@@ -16,7 +16,7 @@ class Select extends InputAbstract
      */
     public $options;
 
-    public function __construct($name, $options, $value = null, $id = null, $appendElProp = '')
+    public function __construct($name, $options, $value = null, $id = null)
     {
         $this->name = $name;
 
@@ -25,10 +25,6 @@ class Select extends InputAbstract
         $this->id = $id ?: $this->defaultId();
 
         $this->options = $this->formatOptions($options);
-
-        if ($appendElProp) {
-            $this->addElProp($appendElProp);
-        }
     }
 
     public function render()

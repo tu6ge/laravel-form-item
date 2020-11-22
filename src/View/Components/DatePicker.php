@@ -17,9 +17,8 @@ class DatePicker extends InputAbstract
         $name,
         //$value = '',
         $id = null,
-        $type = 'date',
-        //$valueFormat = 'yyyy-MM-dd',
-        $appendElProp = ''
+        $type = 'date'
+        //$valueFormat = 'yyyy-MM-dd'
     ) {
         $this->name = $name;
 
@@ -34,10 +33,6 @@ class DatePicker extends InputAbstract
         $this->id = $id ?: $this->defaultId();
 
         $this->type = $type;
-
-        if ($appendElProp) {
-            $this->addElProp($appendElProp);
-        }
     }
 
     public function render()

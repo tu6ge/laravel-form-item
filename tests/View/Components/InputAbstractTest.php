@@ -15,7 +15,6 @@ class InputAbstractTest extends TestCase
         $this->assertNull($bar->value);
         $this->assertNotNull($bar->id);
         $this->assertEquals($bar->type, '');
-        $this->assertEquals($bar->append_el_prop, '');
     }
 
     public function testConstructValue()
@@ -49,20 +48,6 @@ class InputAbstractTest extends TestCase
         $this->assertEquals($bar->type, 'bar_type');
     }
 
-    public function testConstructPlaceholder()
-    {
-        $bar = new Bar('test_name', null, null, '', 'foo');
-
-        $this->assertEquals($bar->append_el_prop, ' placeholder=foo');
-    }
-
-    public function testConstructAppendElProp()
-    {
-        $bar = new Bar('test_name', null, null, '', '', 'foo');
-
-        $this->assertEquals($bar->append_el_prop, ' foo');
-    }
-
     public function testDefaultId()
     {
         $bar = new Bar('test_name');
@@ -72,17 +57,6 @@ class InputAbstractTest extends TestCase
 
         $res2 = $bar->defaultId();
         $this->assertNotEquals($res, $res2);
-    }
-
-    public function testAddElProp()
-    {
-        $bar = new Bar('test_name');
-
-        $bar->addElProp('foo');
-        $this->assertEquals($bar->append_el_prop, ' foo');
-
-        $bar->addElProp('foo2');
-        $this->assertEquals($bar->append_el_prop, ' foo foo2');
     }
 
     public function testRender()

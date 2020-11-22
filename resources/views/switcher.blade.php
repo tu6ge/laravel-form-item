@@ -1,6 +1,6 @@
 
 <div id="{{$id}}" >
-    <el-switch v-model="value" {{$append_el_prop}}></el-switch>
+    <el-switch v-model="value" {{ $attributes }}></el-switch>
     <input type="hidden" name="{{$name}}" v-model="value" />
 </div>
 

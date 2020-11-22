@@ -1,6 +1,6 @@
 
 <div id="{{$id}}" >
-    <el-select v-model="value" {{$append_el_prop}}>
+    <el-select v-model="value" {{ $attributes }}>
         @foreach($options as $item)
         <el-option :value='@json($item['value'])' label="{{$item['text']}}" {{$item['prop'] ?? ''}}></el-option>
         @endforeach

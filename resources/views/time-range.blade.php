@@ -1,6 +1,6 @@
 
 <div id="{{$id}}" >
-    <el-time-picker v-model="value" is-range {{$append_el_prop}} @if($picker_options):picker-options='@json($picker_options)' @endif></el-time-picker>
+    <el-time-picker v-model="value" is-range {{ $attributes }} @if($picker_options):picker-options='@json($picker_options)' @endif></el-time-picker>
     <input type="hidden" name="{{$name}}" :value="value_string" />
 </div>
 

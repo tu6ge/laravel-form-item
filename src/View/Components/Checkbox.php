@@ -27,8 +27,7 @@ class Checkbox extends InputAbstract
         $name,
         $options,
         $value = [],
-        $id = null,
-        $appendElProp = ''
+        $id = null
     ) {
         $this->name = $name;
 
@@ -37,10 +36,6 @@ class Checkbox extends InputAbstract
         $this->id = $id ?: $this->defaultId();
 
         $this->options = $this->formatOptions($options);
-
-        if ($appendElProp) {
-            $this->addElProp($appendElProp);
-        }
     }
 
     public function render()

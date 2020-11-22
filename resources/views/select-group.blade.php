@@ -1,6 +1,6 @@
 
 <div id="{{$id}}" >
-    <el-select v-model="value" {{$append_el_prop}}>
+    <el-select v-model="value" {{ $attributes }}>
         @foreach($options as $item)
         <el-option-group label="{{$item['text']}}" {{$item['prop'] ?? ''}}>
             @foreach($item['children'] as $it)

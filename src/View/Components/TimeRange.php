@@ -29,8 +29,7 @@ class TimeRange extends InputAbstract
         $id = null,
         $value = [],
         $format = 'hh:mm:ss',
-        $pickerOptions = [],
-        $appendElProp = ''
+        $pickerOptions = []
     ) {
         $this->name = $name;
 
@@ -41,10 +40,6 @@ class TimeRange extends InputAbstract
         $this->picker_options = $pickerOptions;
 
         $this->id = $id ?: $this->defaultId();
-
-        if ($appendElProp) {
-            $this->addElProp($appendElProp);
-        }
     }
 
     public function render()

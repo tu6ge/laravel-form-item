@@ -60,7 +60,6 @@ class CascaderTest extends TestCase
         $this->assertEquals($cascader->id, 'rand_id');
         $this->assertEquals($cascader->options, $re_options);
         $this->assertEquals($cascader->type, '');
-        $this->assertEquals($cascader->append_el_prop, '');
     }
 
     public function testConstructId()
@@ -191,72 +190,6 @@ class CascaderTest extends TestCase
             'demo_trigger',
         );
 
-        $this->assertEquals($cascader->append_el_prop, '');
         $this->assertEquals($cascader->trigger, 'demo_trigger');
-    }
-
-    public function testClearable()
-    {
-        $cascader = $this->mock(Cascader::class)
-            ->makePartial()
-            ->shouldAllowMockingProtectedMethods();
-        $cascader->shouldReceive('defaultId')
-            ->withNoArgs()
-            ->once()
-            ->andReturn('rand_id');
-        $cascader->shouldReceive('formateCascaderOptions')
-            ->once()
-            ->with([])
-            ->andReturn([]);
-
-        $cascader->shouldReceive('checkResource')
-            ->once()
-            ->with('demo_url')
-            ->andReturnTrue();
-
-        $cascader->__construct(
-            'bar_name',
-            null,
-            null,
-            [],
-            'demo_url',
-            '',
-            true
-        );
-
-        $this->assertEquals($cascader->append_el_prop, ' clearable');
-    }
-
-    public function testElProp()
-    {
-        $cascader = $this->mock(Cascader::class)
-            ->makePartial()
-            ->shouldAllowMockingProtectedMethods();
-        $cascader->shouldReceive('defaultId')
-            ->withNoArgs()
-            ->once()
-            ->andReturn('rand_id');
-        $cascader->shouldReceive('formateCascaderOptions')
-            ->once()
-            ->with([])
-            ->andReturn([]);
-
-        $cascader->shouldReceive('checkResource')
-            ->once()
-            ->with('demo_url')
-            ->andReturnTrue();
-
-        $cascader->__construct(
-            'bar_name',
-            null,
-            null,
-            [],
-            'demo_url',
-            '',
-            false,
-            'demo_prop'
-        );
-
-        $this->assertEquals($cascader->append_el_prop, ' demo_prop');
     }
 }

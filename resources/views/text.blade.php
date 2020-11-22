@@ -1,6 +1,6 @@
 
 <div id="{{$id}}" >
-    <el-input v-model="value" type="{{$type ?: 'text'}}" {{$append_el_prop}}></el-input>
+    <el-input v-model="value" type="{{$type ?: 'text'}}" {{ $attributes }}></el-input>
     <input type="hidden" name="{{$name}}" v-model="value" />
 </div>
 

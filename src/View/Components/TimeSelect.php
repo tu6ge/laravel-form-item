@@ -15,8 +15,7 @@ class TimeSelect extends InputAbstract
         $name,
         $id = null,
         $value = '',
-        $pickerOptions = [],
-        $appendElProp = ''
+        $pickerOptions = []
     ) {
         $this->name = $name;
 
@@ -25,10 +24,6 @@ class TimeSelect extends InputAbstract
         $this->value = $value;
 
         $this->picker_options = $pickerOptions;
-
-        if ($appendElProp) {
-            $this->addElProp($appendElProp);
-        }
     }
 
     public function render()

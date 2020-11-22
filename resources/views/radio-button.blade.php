@@ -1,6 +1,6 @@
 
 <div id="{{$id}}" >
-    <el-radio-group v-model="value" {{$append_el_prop}}>
+    <el-radio-group v-model="value" {{ $attributes }}>
         @foreach($options as $item)
         <el-radio-button :label='@json($item['value'])' {{$item['prop'] ?? ''}}>{{$item['text']}}</el-radio-button>
         @endforeach

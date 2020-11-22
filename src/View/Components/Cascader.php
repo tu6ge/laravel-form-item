@@ -38,9 +38,7 @@ class Cascader extends InputAbstract
         $id = null,
         $options = [],
         $resource = '',
-        $trigger = '',
-        $clearable = false,
-        $appendElProp = ''
+        $trigger = ''
     ) {
         $this->name = $name;
 
@@ -59,14 +57,6 @@ class Cascader extends InputAbstract
         $this->resource = $resource;
 
         $trigger && $this->trigger = $trigger;
-
-        if ($clearable) {
-            $this->addElProp('clearable');
-        }
-
-        if ($appendElProp) {
-            $this->addElProp($appendElProp);
-        }
     }
 
     protected function checkResource($resource)

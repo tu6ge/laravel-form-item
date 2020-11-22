@@ -34,7 +34,6 @@ class DatePickerTest extends TestCase
         $this->assertEquals($class->value, '');
         $this->assertEquals($class->id, 'rand_id');
         $this->assertEquals($class->type, 'date');
-        $this->assertEquals($class->append_el_prop, '');
     }
 
     public function testValue()
@@ -92,27 +91,6 @@ class DatePickerTest extends TestCase
         );
 
         $this->assertEquals($class->type, 'bar_type');
-    }
-
-    public function testElPorp()
-    {
-        $class = $this->mock(DatePicker::class)
-            ->makePartial()
-            ->shouldAllowMockingProtectedMethods();
-
-        $class->shouldReceive('defaultId')
-            ->never()
-            ->andReturn('rand_id');
-
-        $class->__construct(
-            'foo_name',
-            //'foo_value',
-            'foo_id',
-            'bar_type',
-            'test_prop'
-        );
-
-        $this->assertEquals($class->append_el_prop, ' test_prop');
     }
 
     public function testRender()
