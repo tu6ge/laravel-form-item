@@ -47,6 +47,9 @@ jobs:
       # Display installed laravel version
       - name: Install Composer
         run: composer install
+      - name: Start Chrome Driver
+          run: ./vendor/bin/dusk-updater detect --auto-update &&
+            ./vendor/laravel/dusk/bin/chromedriver-linux &
       - name: Show laravel version
         run: composer show laravel/framework
 
