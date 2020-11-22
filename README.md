@@ -2,6 +2,23 @@
 
 developmenting
 
+## 测试
+
+测试覆盖率： [![Coverage Status](https://coveralls.io/repos/github/tu6ge/laravel-form-item/badge.svg?branch=master)](https://coveralls.io/github/tu6ge/laravel-form-item?branch=master)
+
+- 运行全部测试
+```base
+composer test
+```
+- 只运行单元测试
+```base
+composer test-unit
+```
+- 只运行浏览器测试(dusk)
+```base
+composer test-browser
+```
+
 ## TODO
 
 1. 打算使用 blade 的 push 方式插入 js 和 css 文件，
