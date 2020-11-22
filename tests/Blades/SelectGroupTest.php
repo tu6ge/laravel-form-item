@@ -66,7 +66,7 @@ class SelectGroupTest extends ViewTestCase
                     'children' => [
                         [
                             'value' => 11,
-                            'text' => '西瓜'
+                            'text' => '西瓜',
                         ],
                         [
                             'value' => 22,
@@ -75,7 +75,7 @@ class SelectGroupTest extends ViewTestCase
                         ],
                         [
                             'value' => 23,
-                            'text'  => '香蕉'
+                            'text'  => '香蕉',
                         ],
                     ],
                 ],

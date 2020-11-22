@@ -63,16 +63,16 @@ class SelectTest extends ViewTestCase
             'options'       => [
                 [
                     'value' => 11,
-                    'text'  => '西瓜'
+                    'text'  => '西瓜',
                 ],
                 [
                     'value' => 22,
-                    'text'  => '苹果'
+                    'text'  => '苹果',
                 ],
                 [
                     'value' => 23,
                     'text'  => '香蕉',
-                    'prop'  => 'bar_prop'
+                    'prop'  => 'bar_prop',
                 ],
             ],
         ])->assertSeeInOrder([
