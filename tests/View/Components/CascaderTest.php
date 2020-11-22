@@ -121,6 +121,31 @@ class CascaderTest extends TestCase
         ]);
     }
 
+    public function testCheckResource2()
+    {
+        $options = [
+            [
+                'text'      => 'foo_text',
+                'value'     => 'foo_value',
+                'children'  => [],
+            ],
+        ];
+
+        $fixture = new Cascader(
+            'bar_name',
+            null,
+            null,
+            $options,
+        );
+        $reflector = new ReflectionMethod(Cascader::class, 'checkResource');
+        $checkResource = $reflector->getClosure($fixture);
+
+        $rs = call_user_func_array($checkResource, [
+            'test_url/__pid__',
+        ]);
+        $this->assertNull($rs);
+    }
+
     public function testRender()
     {
         $cascader = $this->mock(Cascader::class)
