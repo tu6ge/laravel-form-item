@@ -25,7 +25,7 @@
                     lazy: resource ? true : false,
                     expandTrigger: @json($trigger),
                     lazyLoad (node, resolve) {
-                        const { level ,value } = node;
+                        const { value } = node;
                         let val  = value ? value: 0;
 
                         axios.get(resource.replace('__pid__', val))

@@ -21,8 +21,8 @@ $options = [
             [
                 'value' => 23,
                 'text'  => '香蕉'
-            ]
-        ]
+            ],
+        ],
     ],
     [
         'text' => '蔬菜',
@@ -39,9 +39,9 @@ $options = [
             [
                 'value' => 44,
                 'text'  => '白菜'
-            ]
-        ]
-    ]
+            ],
+        ],
+    ],
 ];
 @endphp
     <form method="POST" action="form_action">

@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelFormItem\Tests\Blades;
+namespace LaravelFormItem\Tests\Blades\Includes;
 
 use LaravelFormItem\Tests\ViewTestCase;
 

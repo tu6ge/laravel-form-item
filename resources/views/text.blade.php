@@ -11,7 +11,7 @@
         el:'#{{$id}}',
         data(){
             return {
-                value:'{{$value}}'
+                value:"{{$value}}",
             };
         }
     });

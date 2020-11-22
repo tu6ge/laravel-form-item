@@ -17,7 +17,7 @@ $options = [
     [
         'value' => 23,
         'text'  => '香蕉'
-    ]
+    ],
 ];
 @endphp
     <form method="POST" action="form_action">
