@@ -45,6 +45,8 @@ jobs:
 #        run: composer require laravel/legacy-factories
 
       # Display installed laravel version
+      - name: Install Composer
+        run: composer install
       - name: Show laravel version
         run: composer show laravel/framework
 
