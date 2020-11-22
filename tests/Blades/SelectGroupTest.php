@@ -62,11 +62,11 @@ class SelectGroupTest extends ViewTestCase
             'value'         => 'foo_val',
             'options'       => [
                 [
-                    'text' => '水果',
-                    'children' => [
+                    'text'      => '水果',
+                    'children'  => [
                         [
                             'value' => 11,
-                            'text' => '西瓜',
+                            'text'  => '西瓜',
                         ],
                         [
                             'value' => 22,
