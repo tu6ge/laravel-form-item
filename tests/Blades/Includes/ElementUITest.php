@@ -32,4 +32,16 @@ class ElementUITest extends ViewTestCase
         $this->view('input::include.element-ui')
             ->assertDontSee('<script src=""></script>', false);
     }
+
+    public function testOnce()
+    {
+        $this->app['config']->set('form_item.vue_url', 'bar');
+        $this->blade('foo_first @include("input::include.element-ui") bar_content @include("input::include.element-ui") bar_last')
+            ->assertSeeInOrder([
+                'foo_first',
+                '<script src="bar"></script>',
+                'bar_content'
+            ], false)
+            ->assertSee('bar_content  bar_last', false);
+    }
 }

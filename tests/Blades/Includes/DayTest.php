@@ -38,4 +38,16 @@ class DayTest extends ViewTestCase
         $this->view('input::include.day')
             ->assertDontSee('<script>dayjs.extend(window.dayjs_plugin_customParseFormat);</script>', false);
     }
+
+    public function testOnce()
+    {
+        $this->app['config']->set('form_item.day_js', 'bar_day_js');
+        $this->blade('foo_first @include("input::include.day") bar_content @include("input::include.day") bar_last')
+            ->assertSeeInOrder([
+                'foo_first',
+                '<script src="bar_day_js"></script>',
+                'bar_content'
+            ], false)
+            ->assertSee('bar_content  bar_last', false);
+    }
 }
