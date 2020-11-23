@@ -40,7 +40,7 @@ class ElementUITest extends ViewTestCase
             ->assertSeeInOrder([
                 'foo_first',
                 '<script src="bar"></script>',
-                'bar_content'
+                'bar_content',
             ], false)
             ->assertSee('bar_content  bar_last', false);
     }

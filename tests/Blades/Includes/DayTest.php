@@ -46,7 +46,7 @@ class DayTest extends ViewTestCase
             ->assertSeeInOrder([
                 'foo_first',
                 '<script src="bar_day_js"></script>',
-                'bar_content'
+                'bar_content',
             ], false)
             ->assertSee('bar_content  bar_last', false);
     }
