@@ -7,41 +7,47 @@ return [
      * prod: https://cdn.jsdelivr.net/npm/vue@2.6.12
      * If your page is already import vue.js ,you should set this value is null.
      */
-    'vue_url' => 'https://cdn.jsdelivr.net/npm/vue/dist/vue.js',
+    'vue_url' => 'https://cdn.jsdelivr.net/npm/vue@2.6.12',
 
     /**
      * import element UI css style
+     * in china ,you may change it to http://unpkg.zhimg.com/element-ui@2.13.2/lib/theme-chalk/index.css
      * If your page is already import element-ui.css ,you should set this value is null.
      */
-    'element_ui_css' => 'http://unpkg.zhimg.com/element-ui/lib/theme-chalk/index.css',
+    'element_ui_css' => 'https://unpkg.com/element-ui@2.14.1/lib/theme-chalk/index.css',
 
     /**
      * import element UI js
+     * in china ,you may change it to http://unpkg.zhimg.com/element-ui/lib/index.js
      * If your page is already import element-ui.js ,you should set this value is null.
      */
-    'element_ui_js' => 'http://unpkg.zhimg.com/element-ui/lib/index.js',
+    'element_ui_js' => 'https://unpkg.com/element-ui@2.14.1/lib/index.js',
 
     /**
      * import axios js
+     * in china ,you may change it to http://unpkg.zhimg.com/axios@0.19.2/dist/axios.min.js
      * If your page is already import axios.js ,you should set this value is null.
      */
-    'axios_url' => 'http://unpkg.zhimg.com/axios/dist/axios.min.js',
+    'axios_url' => 'https://unpkg.com/axios@0.21.0/dist/axios.min.js',
 
     /**
      * import day.js
+     * in china ,you may change it to http://unpkg.zhimg.com/dayjs@1.9.6/dayjs.min.js
      * If your page is already import day.js ,you should set this value is null.
      */
-    'day_js' => 'http://unpkg.zhimg.com/dayjs@1.8.21/dayjs.min.js',
+    'day_js' => 'https://unpkg.com/dayjs@1.9.6/dayjs.min.js',
 
     /**
      * import day utc plugin
+     * in china ,you may change it to http://unpkg.zhimg.com/dayjs@1.9.6/plugin/utc.js
      * If your page is already import day utc plugin ,you should set this value is null.
      */
-    'day_utc_js' => 'http://unpkg.zhimg.com/dayjs@1.8.21/plugin/utc.js',
+    'day_utc_js' => 'http://unpkg.com/dayjs@1.9.6/plugin/utc.js',
 
     /**
      * import day customParseFormat plugin
+     * in china ,you may change it to http://unpkg.zhimg.com/dayjs@1.9.6/plugin/customParseFormat.js
      * If your page is already import day customParseFormat plugin ,you should set this value is null.
      */
-    'day_customParseFormat_js' => 'http://unpkg.zhimg.com/dayjs@1.8.21/plugin/customParseFormat.js',
+    'day_customParseFormat_js' => 'https://unpkg.com/dayjs@1.9.6/plugin/customParseFormat.js',
 ];
