@@ -8,7 +8,7 @@
 :::
 ::: slot highlight
 ``` html
-<x-input-text name="text3" appendElProp="clearable"></x-input-text>
+<x-input-text name="text3" clearable ></x-input-text>
 ```
 :::
 </demo-block>

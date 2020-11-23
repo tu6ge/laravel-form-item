@@ -21,13 +21,13 @@
 :::
 ::: slot highlight
 ``` html
-<x-input-text name="text2" appendElProp="maxlength=10 show-word-limit"></x-input-text>
+<x-input-text name="text2" maxlength=10 show-word-limit></x-input-text>
 ```
 :::
 </demo-block>
 
 ::: tip
-要了解更多 appendElProp 的用法，请查看 [高级用法](/advanced/#appendelprop)  
+要了解更多属性的用法，请查看 [高级用法](/advanced/) 
 :::
 
 ## 文本域
