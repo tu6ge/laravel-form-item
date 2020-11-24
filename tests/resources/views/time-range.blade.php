@@ -6,7 +6,9 @@
 <body>
     <form method="POST" action="form_action">
         {{ csrf_field() }}
-        <x-input-time-range name="bar_name" ></x-input-time-range>
+        <div dusk="first-form">
+            <x-input-time-range name="bar_name" ></x-input-time-range>
+        </div>
         <button type="submit" id="submit">submit</button>
     </form>
 
