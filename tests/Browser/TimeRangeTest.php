@@ -21,7 +21,7 @@ class TimeRangeTest extends BrowserTestCase
                         ->keys('.el-date-editor:first-child .el-range-input:nth-child(4)', '13:01:07');
 				})
                 ->click('#submit')
-                ->assertSee('12:34:56');
+                ->assertSee('13:01:07');
         });
     }
 
