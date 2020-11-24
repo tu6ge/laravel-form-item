@@ -14,9 +14,10 @@ class TimeRangeTest extends BrowserTestCase
                 ->click('#submit')
                 ->assertDontSee('"bar_name":""') // todo now time is flowing , and dusk can not mocking it.
                 ->back()
-                ->with('@first-form', function ($table) {
+                ->with('@first-form', function (Browser $table) {
                     $table->click('.el-date-editor:first-child .el-range-input:nth-child(2)')
                         ->keys('.el-date-editor:first-child .el-range-input:nth-child(2)', '12:34:56')
+                        ->pause(500)
                         ->click('.el-date-editor:first-child .el-range-input:nth-child(4)')
                         ->click('.el-date-editor:first-child .el-range-input:nth-child(4)')
                         ->click('.el-date-editor:first-child .el-range-input:nth-child(4)')
