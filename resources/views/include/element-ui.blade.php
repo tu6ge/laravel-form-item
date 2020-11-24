@@ -1,4 +1,10 @@
+@php
+    // @codeCoverageIgnoreStart
+@endphp
 @once
+@php
+    // @codeCoverageIgnoreEnd
+@endphp
 
 @if(config('form_item.vue_url'))
 <script src="{{config('form_item.vue_url')}}"></script>
@@ -13,4 +19,10 @@
 <script src="{{config('form_item.element_ui_js')}}"></script>
 @endif
 
+@php
+    // @codeCoverageIgnoreStart
+@endphp
 @endonce
+@php
+    // @codeCoverageIgnoreEnd
+@endphp

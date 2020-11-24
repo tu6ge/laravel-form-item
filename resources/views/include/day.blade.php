@@ -1,4 +1,10 @@
+@php
+    // @codeCoverageIgnoreStart
+@endphp
 @once
+@php
+    // @codeCoverageIgnoreEnd
+@endphp
 
 @if(config('form_item.day_js'))
     <script src="{{config('form_item.day_js')}}"></script>
@@ -14,4 +20,10 @@
     <script>dayjs.extend(window.dayjs_plugin_customParseFormat);</script>
 @endif
 
+@php
+    // @codeCoverageIgnoreStart
+@endphp
 @endonce
+@php
+    // @codeCoverageIgnoreEnd
+@endphp
