@@ -16,9 +16,7 @@ class TimeRangeTest extends BrowserTestCase
                 ->back()
                 ->with('@first-form', function ($table) {
                     $table->click('.el-date-editor:first-child .el-range-input:nth-child(2)')
-                        ->keys('.el-date-editor:first-child .el-range-input:nth-child(2)', '12:34:56')
-                        ->click('.el-date-editor:first-child .el-range-input:nth-child(4)')
-                        ->keys('.el-date-editor:first-child .el-range-input:nth-child(4)', '13:01:07');
+                        ->keys('.el-date-editor:first-child .el-range-input:nth-child(2)', '12:34:56', '{tab}', '13:01:07');
 				})
                 ->click('#submit');
             echo $browser->driver->getPageSource();
