@@ -14,14 +14,14 @@ return [
      * in china ,you may change it to http://unpkg.zhimg.com/element-ui@2.13.2/lib/theme-chalk/index.css
      * If your page is already import element-ui.css ,you should set this value is null.
      */
-    'element_ui_css' => 'http://unpkg.zhimg.com/element-ui@2.13.2/lib/theme-chalk/index.css',
+    'element_ui_css' => 'https://cdn.jsdelivr.net/npm/element-ui@2.14.1/lib/theme-chalk/index.css',
 
     /**
      * import element UI js
      * in china ,you may change it to http://unpkg.zhimg.com/element-ui/lib/index.js
      * If your page is already import element-ui.js ,you should set this value is null.
      */
-    'element_ui_js' => 'http://unpkg.zhimg.com/element-ui@2.14.1/lib/index.js',
+    'element_ui_js' => 'https://cdn.jsdelivr.net/npm/element-ui@2.14.1/lib/index.js',
 
     /**
      * import axios js
