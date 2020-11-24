@@ -27,6 +27,9 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
+      - name: Set time zone
+        run: timedatectl set-timezone Asia/Shanghai
+
       # Configure PHP
       - name: Select PHP version
         uses: shivammathur/setup-php@master
