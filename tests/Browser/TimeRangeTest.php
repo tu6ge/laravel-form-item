@@ -20,9 +20,8 @@ class TimeRangeTest extends BrowserTestCase
                         ->click('.el-date-editor:first-child .el-range-input:nth-child(4)')
                         ->keys('.el-date-editor:first-child .el-range-input:nth-child(4)', '13:01:07');
 				})
-                ->click('#submit');
-            echo $browser->driver->getPageSource();
-            echo "\n";
+                ->click('#submit')
+                ->assertSee('"bar_name_edit":"12:34:56,13:01:07"');
         });
     }
 
