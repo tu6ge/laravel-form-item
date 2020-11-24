@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Set time zone
-        run: timedatectl set-timezone Asia/Shanghai
+        run: sudo timedatectl set-timezone Asia/Shanghai
 
       # Configure PHP
       - name: Select PHP version
