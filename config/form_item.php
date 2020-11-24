@@ -28,26 +28,26 @@ return [
      * in china ,you may change it to http://unpkg.zhimg.com/axios@0.19.2/dist/axios.min.js
      * If your page is already import axios.js ,you should set this value is null.
      */
-    'axios_url' => 'http://unpkg.zhimg.com/axios@0.19.2/dist/axios.min.js',
+    'axios_url' => 'https://cdn.jsdelivr.net/npm/axios@0.21.0/dist/axios.min.js',
 
     /**
      * import day.js
      * in china ,you may change it to http://unpkg.zhimg.com/dayjs@1.9.6/dayjs.min.js
      * If your page is already import day.js ,you should set this value is null.
      */
-    'day_js' => 'http://unpkg.zhimg.com/dayjs@1.9.6/dayjs.min.js',
+    'day_js' => 'https://cdn.jsdelivr.net/npm/dayjs@1.9.5/dayjs.min.js',
 
     /**
      * import day utc plugin
      * in china ,you may change it to http://unpkg.zhimg.com/dayjs@1.9.6/plugin/utc.js
      * If your page is already import day utc plugin ,you should set this value is null.
      */
-    'day_utc_js' => 'http://unpkg.zhimg.com/dayjs@1.9.6/plugin/utc.js',
+    'day_utc_js' => 'https://cdn.jsdelivr.net/npm/dayjs@1.9.5/plugin/utc.js',
 
     /**
      * import day customParseFormat plugin
      * in china ,you may change it to http://unpkg.zhimg.com/dayjs@1.9.6/plugin/customParseFormat.js
      * If your page is already import day customParseFormat plugin ,you should set this value is null.
      */
-    'day_customParseFormat_js' => 'http://unpkg.zhimg.com/dayjs@1.9.6/plugin/customParseFormat.js',
+    'day_customParseFormat_js' => 'https://cdn.jsdelivr.net/npm/dayjs@1.9.5/plugin/customParseFormat.js',
 ];
