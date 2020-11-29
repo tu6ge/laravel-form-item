@@ -2,8 +2,6 @@
 
 namespace LaravelFormItem\Tests\Browser;
 
-use Facebook\WebDriver\WebDriverBy;
-use Facebook\WebDriver\WebDriverExpectedCondition;
 use Laravel\Dusk\Browser;
 use LaravelFormItem\Tests\BrowserTestCase;
 
