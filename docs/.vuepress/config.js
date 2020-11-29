@@ -36,7 +36,8 @@ module.exports = {
                 // 当前 locale 的 algolia docsearch 选项
                 algolia: {},
                 nav: [
-                    { text: '介绍', link: '/guide/', ariaLabel: '介绍' }
+                    { text: '介绍', link: '/guide/', ariaLabel: '介绍' },
+                    { text: 'API', link: '/api', ariaLabel: 'API' }
                 ],
 
                 sidebar: [
@@ -49,7 +50,7 @@ module.exports = {
                         ]
                     },
                     {
-                        title: '基础用法',   // 必要的
+                        title: '表单域用法',   // 必要的
                         //sidebarDepth: 1,    // 可选的, 默认值是 1
                         children: [
                             '/form/',
@@ -63,23 +64,6 @@ module.exports = {
                             '/form/cascader',
                             '/form/time',
                             '/form/date-picker',
-                        ]
-                    },
-                    {
-                        title: '高级用法',   // 必要的
-                        //sidebarDepth: 1,    // 可选的, 默认值是 1
-                        children: [
-                            '/advanced/',
-                            '/advanced/text',
-                            '/advanced/number',
-                            '/advanced/switcher',
-                            '/advanced/slider',
-                            '/advanced/radio',
-                            '/advanced/checkbox',
-                            '/advanced/select',
-                            '/advanced/cascader',
-                            '/advanced/time',
-                            '/advanced/date-picker',
                         ]
                     },
                 ]
@@ -97,7 +81,8 @@ module.exports = {
                 },
                 algolia: {},
                 nav: [
-                    { text: 'Guide', link: '/en/guide/', ariaLabel: 'Guide' }
+                    { text: 'Guide', link: '/en/guide/', ariaLabel: 'Guide' },
+                    { text: 'API', link: '/en/api', ariaLabel: 'API' },
                 ],
                 // sidebar: [
                 //     {
