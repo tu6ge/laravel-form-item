@@ -1,10 +1,12 @@
 # Laravel Form Item Component
 
+[![Tests](https://github.com/tu6ge/laravel-form-item/workflows/Tests/badge.svg?branch=master)](https://github.com/tu6ge/laravel-form-item/)
+[![Coverage Status](https://coveralls.io/repos/github/tu6ge/laravel-form-item/badge.svg?branch=master)](https://coveralls.io/github/tu6ge/laravel-form-item?branch=master)
+
+
 developmenting
 
 ## 测试
-
-测试覆盖率： [![Coverage Status](https://coveralls.io/repos/github/tu6ge/laravel-form-item/badge.svg?branch=master)](https://coveralls.io/github/tu6ge/laravel-form-item?branch=master)
 
 - 运行全部测试
 ```base
