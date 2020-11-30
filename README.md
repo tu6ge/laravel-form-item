@@ -61,10 +61,6 @@ Route::get('demo', function() {
 </form>
 ```
 
-::: tip 提示
-我们在设计单选框的时候，对选项进行了约定，每个选项中的 `text` 和 `value` 对应显示的内容和最终的表单值，点击 [单选框文档](https://tu6ge.github.io/laravel-form-item/form/radio.html) 查看详情
-:::
-
 [查看文档](https://tu6ge.github.io/laravel-form-item) 了解更多
 
 ## 测试
