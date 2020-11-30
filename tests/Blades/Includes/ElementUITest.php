@@ -2,10 +2,19 @@
 
 namespace LaravelFormItem\Tests\Blades\Includes;
 
+use Illuminate\View\Compilers\BladeCompiler;
 use LaravelFormItem\Tests\ViewTestCase;
+use Mockery;
 
 class ElementUITest extends ViewTestCase
 {
+    public function tearDown(): void
+    {
+        Mockery::close();
+
+        parent::tearDown();
+    }
+
     public function testRender()
     {
         $this->app['config']->set('form_item.vue_url', 'bar');
@@ -36,12 +45,21 @@ class ElementUITest extends ViewTestCase
     public function testOnce()
     {
         $this->app['config']->set('form_item.vue_url', 'bar');
-        $this->blade('foo_first @include("input::include.element-ui") bar_content @include("input::include.element-ui") bar_last')
-            ->assertSeeInOrder([
-                'foo_first',
-                '<script src="bar"></script>',
-                'bar_content',
-            ], false)
-            ->assertSee('bar_content  bar_last', false);
+
+        $this->instance('blade.compiler', Mockery::mock(
+            BladeCompiler::class,
+            [$this->app['files'], $this->app['config']['view.compiled']],
+            function ($mock) {
+                $mock->shouldAllowMockingProtectedMethods();
+                $mock->makePartial();
+                $mock->shouldReceive('isExpired')->andReturn(true);
+                $mock->shouldReceive('compileOnce')->once();
+                $mock->shouldReceive('compileEndOnce')->once();
+            }
+        ));
+
+        $this->view('input::include.element-ui');
+
+        $this->assertEquals($this->app['blade.compiler']->isExpired('bar'), true);
     }
 }

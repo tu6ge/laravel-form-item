@@ -2,7 +2,9 @@
 
 namespace LaravelFormItem\Tests\Blades\Includes;
 
+use Illuminate\View\Compilers\BladeCompiler;
 use LaravelFormItem\Tests\ViewTestCase;
+use Mockery;
 
 class AxiosTest extends ViewTestCase
 {
@@ -19,13 +21,22 @@ class AxiosTest extends ViewTestCase
 
     public function testOnce()
     {
-        $this->app['config']->set('form_item.axios_url', 'bar');
-        $this->blade('foo_first @include("input::include.axios") bar_content @include("input::include.axios") bar_last')
-            ->assertSeeInOrder([
-                'foo_first',
-                '<script src="bar"></script>',
-                'bar_content',
-            ], false)
-            ->assertSee('bar_content  bar_last', false);
+        $this->app['config']->set('form_item.vue_url', 'bar');
+
+        $this->instance('blade.compiler', Mockery::mock(
+            BladeCompiler::class,
+            [$this->app['files'], $this->app['config']['view.compiled']],
+            function ($mock) {
+                $mock->shouldAllowMockingProtectedMethods();
+                $mock->makePartial();
+                $mock->shouldReceive('isExpired')->andReturn(true);
+                $mock->shouldReceive('compileOnce')->once();
+                $mock->shouldReceive('compileEndOnce')->once();
+            }
+        ));
+
+        $this->view('input::include.axios');
+
+        $this->assertEquals($this->app['blade.compiler']->isExpired('bar'), true);
     }
 }

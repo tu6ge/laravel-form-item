@@ -2,7 +2,9 @@
 
 namespace LaravelFormItem\Tests\Blades\Includes;
 
+use Illuminate\View\Compilers\BladeCompiler;
 use LaravelFormItem\Tests\ViewTestCase;
+use Mockery;
 
 class DayTest extends ViewTestCase
 {
@@ -41,13 +43,22 @@ class DayTest extends ViewTestCase
 
     public function testOnce()
     {
-        $this->app['config']->set('form_item.day_js', 'bar_day_js');
-        $this->blade('foo_first @include("input::include.day") bar_content @include("input::include.day") bar_last')
-            ->assertSeeInOrder([
-                'foo_first',
-                '<script src="bar_day_js"></script>',
-                'bar_content',
-            ], false)
-            ->assertSee('bar_content  bar_last', false);
+        $this->app['config']->set('form_item.vue_url', 'bar');
+
+        $this->instance('blade.compiler', Mockery::mock(
+            BladeCompiler::class,
+            [$this->app['files'], $this->app['config']['view.compiled']],
+            function ($mock) {
+                $mock->shouldAllowMockingProtectedMethods();
+                $mock->makePartial();
+                $mock->shouldReceive('isExpired')->andReturn(true);
+                $mock->shouldReceive('compileOnce')->once();
+                $mock->shouldReceive('compileEndOnce')->once();
+            }
+        ));
+
+        $this->view('input::include.day');
+
+        $this->assertEquals($this->app['blade.compiler']->isExpired('bar'), true);
     }
 }
