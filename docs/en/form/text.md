@@ -1,6 +1,6 @@
-# 输入框
+# Text Input
 
-## 基础用法
+## Basic usage
 
 <demo-block>
 ::: slot source
@@ -27,7 +27,7 @@
 </demo-block>
 
 ::: tip
-要了解更多属性的用法，请查看 [高级用法](/advanced/) 
+要了解更多属性的用法，请查看 [API](/en/api.html#text) 
 :::
 
 ## 文本域

@@ -121,7 +121,7 @@ Route::get('demo', function() {
 |----|----|----|---|
 | value | 必填| int 或 string | 选项的值，最终传递给 `form` 表单的数据 |
 | text | 必填|string | 选项的显示信息，用于单选框的显示 |
-| prop | 选填 | string | 用于控制单个选项的某些特性，如 `disabled` ，了解更多请查看[高级用法](/advanced/select.html) |
+| prop | 选填 | string | 用于控制单个选项的某些特性，如 `disabled` ，了解更多请查看 [API](/api.html#select-下列选择器) |
 
 - 分组下拉列表
 

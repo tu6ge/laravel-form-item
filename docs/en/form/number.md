@@ -1,6 +1,6 @@
-# 计数器
+# Number
 
-## 基础用法
+## Basic usage
 
 <demo-block>
 默认值 2 

@@ -1,21 +1,21 @@
-# 基础用法
+# Basic usage
 
-从这一节开始，我们将逐个的介绍表单域的基础使用方法
+Starting from this section, we will introduce the basic use of form fields one by one.
 
+## Public Attibute
 
-## 公共属性
-
-所有的表单域都有如下的属性
+All form fields have the following attibutes.
 
 ### name
 
-每个表单域都有一个 `name` 属性，而且不能为空，通过这个值与 `form` 进行交互
+any form item has `name` atribute,and it is not empty,it interacts with `form` through this value.
 
 ### id
 
-每个表单域都有一个 `id` 属性，会赋值到最终显示在 `html` 中的 `id` 属性值。
-如果不设置，组件会自动生成一个前缀为 `input_` 的随机字符串
+any form item has `id` atribute，The value of the `id` attribute that is finally displayed in the `html`.
+If it is not set, the component will automatically generate a prefix of `input_` random string.
 
 ### value
 
-每个表单域都可以设置 `value` 属性，对应表单域的值，这在你的编辑表单中会很有用处
+any form item has `value` atribute，the value can be empty.It corresponds to the default value of the form item,
+this can be useful in your edit form

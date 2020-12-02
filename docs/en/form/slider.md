@@ -1,6 +1,6 @@
-# 滑块
+# Slider
 
-## 基础用法
+## Basic usage
 
 <demo-block>
 ::: slot source

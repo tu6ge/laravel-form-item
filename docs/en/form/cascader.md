@@ -1,6 +1,6 @@
-# 级联选择器
+# Cascader
 
-## 基础用法
+## Basic usage
 
 <demo-block>
 在 php 文件中构建选项数组，要求每个数组中必须有 `value` , `text` 和 `children` ，分别表示选项的值,显示的文本

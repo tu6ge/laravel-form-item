@@ -55,7 +55,7 @@ sidebar: auto
 原生属性，是否只读 
 -->
 
-## text 输入框
+## text
 
 ### type
 
@@ -134,7 +134,7 @@ sidebar: auto
 - **用法**：
 是否只读
 
-## number 计数器
+## number
 
 ### min
 
@@ -164,7 +164,7 @@ sidebar: auto
 - **用法**：
 计数器的尺寸，可选值有 `large`, `small`
 
-## switcher 开关
+## switcher
 
 ### width
 
@@ -173,7 +173,7 @@ sidebar: auto
 - **用法**：
 开关的宽度
 
-## 滑块
+## slider
 
 ### min
 
@@ -197,7 +197,7 @@ sidebar: auto
 滑块每次挪动的最小步长
 
 
-## radio 单选框
+## radio
 
 ### options
 
@@ -217,7 +217,7 @@ sidebar: auto
 单选框的尺寸，可设置的值有：`medium` / `small` / `mini`
 -->
 
-## radio button 单选按钮
+## radio button
 
 ### options
 
@@ -237,7 +237,7 @@ sidebar: auto
 单选框的尺寸，可设置的值有：`medium` / `small` / `mini`
 -->
 
-## checkbox 多选框
+## checkbox
 
 ### options
 
@@ -280,7 +280,7 @@ sidebar: auto
 - **用法**：
 可被勾选的 checkbox 的最多数量
 
-## checkbox button 多选按钮
+## checkbox button
 
 ### options
 
@@ -323,7 +323,7 @@ sidebar: auto
 - **用法**：
 可被勾选的 checkbox 的最多数量
 
-## select 下列选择器
+## select
 
 ### options
 
@@ -348,7 +348,7 @@ sidebar: auto
 - **用法**：
 如果设置为 `true`, 输入框中会显示清空按钮
 
-## select group 下列选择器,选项分组
+## select group
 
 ### options
 
@@ -373,7 +373,7 @@ sidebar: auto
 - **用法**：
 如果设置为 `true`, 输入框中会显示清空按钮
 
-## cascader 级联选择器
+## cascader
 
 ### options	
 
@@ -468,7 +468,7 @@ $category = [
 - **用法**：
 输入框中是否显示选中值的完整路径
 
-## time picker 时间选择器
+## time picker
 
 ### editable		
 

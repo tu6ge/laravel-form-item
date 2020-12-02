@@ -1,6 +1,6 @@
-# 开关
+# Switcher
 
-## 基础用法
+## Basic usage
 
 <demo-block>
 请注意，如果需要传入未选中的默认值，则应该是 `:value="false"` 这里的 `false` 不会当做字符串处理
