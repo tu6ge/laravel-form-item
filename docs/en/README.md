@@ -3,7 +3,7 @@ home: true
 heroText: Laravel Form Item
 tagline: a plugin of set form item to strong
 actionText: Guide →
-actionLink: /en/**guide/
+actionLink: /en/guide/
 features:
 - title: use Element UI render
   details: include date picker, relation selection and more ...
