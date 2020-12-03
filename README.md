@@ -2,6 +2,7 @@
 
 [![Tests](https://github.com/tu6ge/laravel-form-item/workflows/Tests/badge.svg?branch=master)](https://github.com/tu6ge/laravel-form-item/)
 [![Coverage Status](https://coveralls.io/repos/github/tu6ge/laravel-form-item/badge.svg?branch=master)](https://coveralls.io/github/tu6ge/laravel-form-item?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/tu6ge/laravel-form-item/v)](//packagist.org/packages/tu6ge/laravel-form-item)
 
 
 这是一个 Laravel 视图组件，可以让开发者在 Laravel 视图中便捷地嵌入各种表单域，有文本输入框、单选框、多选框、下拉列表框、数字输入框、 时间选择器、日期选择器、滑块、开关以及强大的级联选择器。
