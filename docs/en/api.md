@@ -63,8 +63,8 @@ If you set this value is `true`, this form field is can not edited.
 - **default**： `text`
 - **description**：
     You can use the following values:
-    - `text`：默认是一个单行文本框
-    - `textarea` ：这样就变成了一个多行文本框。
+    - `text`: A single line text input
+    - `textarea` : A multiline text input
 - **usage**：
 
 ```html
@@ -76,93 +76,93 @@ If you set this value is `true`, this form field is can not edited.
 - **type**: `number`
 - **default**： nothing
 - **usage**：
-    最大输入长度
+    same as `maxlength` in native input
     
 ### minlength
 
 - **type**: `number`
 - **default**： nothing
 - **usage**：
-    最小输入长度
+    same as `minlength` in native input
     
 ### show-word-limit	
 
 - **type**: `boolean`
 - **default**： `false`
 - **usage**：
-是否显示输入字数统计，只在 type = "text" 或 type = "textarea" 时有效
+whether show word count，only works when type is `text` or `textarea`
 
 ### placeholder	
 
 - **type**: `string`
 - **default**： nothing
 - **usage**：
-输入框占位文本
+placeholder of Input
 
 ### clearable	
 
 - **type**: `boolean`
 - **default**： false`
 - **usage**：
-如果设置为 `true`, 输入框中会显示清空按钮
+whether to show clear button
 
 ### size	
 
 - **type**: `string`
-- **可选值**： `medium | small | mini`
+- **option**： `medium` , `small` or `mini`
 - **usage**：
-只有在多行文本框中才会起作用
+size of input, works when type is not `textarea`
 
 ### rows	
 
 - **type**: `number`
 - **default**： `2`
 - **usage**：
-只有在多行文本框中才会起作用
+number of rows of textarea, works when type is not `textarea`
 
-### autosize	
+### autosize
 
 - **type**: `boolean`
-- **default**： `false`
+- **default**：`false`
 - **usage**：
-自适应内容高度，只有在多行文本框中才会起作用
+whether textarea has an adaptive height, only works when type is `textarea`
 
 ### readonly
 
 - **type**: `boolean`
 - **default**： `false`
 - **usage**：
-是否只读
+same as `readonly` in native input
 
 ## number
 
 ### min
 
 - **type**: `number`
-- **default**： nothing
+- **default**： -Infinity
 - **usage**：
-计数器的最小可设置值
+the minimum allowed value
 
 ### max
 
 - **type**: `number`
-- **default**： nothing
+- **default**： Infinity
 - **usage**：
-计数器的最大可设置值
+the maximum allowed value
 
 ### step
 
 - **type**: `number`
 - **default**： `1`
 - **usage**：
-步长，点击 + 或 - 按钮所改变的数量
+incremental step
 
 ### size
 
 - **type**: `string`
 - **default**： nothing
 - **usage**：
-计数器的尺寸，可选值有 `large`, `small`
+size of the component,optional values is `large`, `small`
 
 ## switcher
 
@@ -171,7 +171,7 @@ If you set this value is `true`, this form field is can not edited.
 - **type**: `number`
 - **default**： `40`
 - **usage**：
-开关的宽度
+width of Switch
 
 ## slider
 
@@ -180,21 +180,21 @@ If you set this value is `true`, this form field is can not edited.
 - **type**: `number`
 - **default**： `0`
 - **usage**：
-滑块可设置的最小值
+minimum value of slider
 
 ### max
 
 - **type**: `number`
 - **default**： `100`
 - **usage**：
-滑块可设置的最大值
+maximum value of slider
 
 ### step
 
 - **type**: `number`
 - **default**： `1`
 - **usage**：
-滑块每次挪动的最小步长
+step size
 
 
 ## radio
@@ -204,9 +204,9 @@ If you set this value is `true`, this form field is can not edited.
 - **type**: `array`
 - **must**： **rquired**
 - **usage**：
-单选框的选项数组，每个值需要包含如下字段：
- - `value` : 用于标识该选项的值
- - `text` : 用于标识该选项在表单中显示的名称
+The options array of radio. Each value needs to contain the following fields:
+ - `value` : The value that identifies the option
+ - `text` : Identifies the name of the option as it appears in the form
 
 <!--
 ### size
@@ -224,9 +224,9 @@ If you set this value is `true`, this form field is can not edited.
 - **type**: `array`
 - **must**： **rquired**
 - **usage**：
-单选框的选项数组，每个值需要包含如下字段：
- - `value` : 用于标识该选项的值
- - `text` : 用于标识该选项在表单中显示的名称
+The options array of radio. Each value needs to contain the following fields:
+ - `value` : The value that identifies the option
+ - `text` : Identifies the name of the option as it appears in the form
 
 <!--
 ### size
@@ -244,19 +244,20 @@ If you set this value is `true`, this form field is can not edited.
 - **type**: `array`
 - **must**： **rquired**
 - **usage**：
-多选框的选项数组，每个值需要包含如下字段：
- - `value` : 用于标识该选项的值
- - `text` : 用于标识该选项在表单中显示的名称
+The options array of checkbox. Each value needs to contain the following fields:
+ - `value` : The value that identifies the option
+ - `text` : Identifies the name of the option as it appears in the form
  
 ### value
 
 - **type**: `array`
 - **default**： nothing
 - **usage**：
-如果要为多选框设置默认值，传入的值需要是一个数组，包含每一已选项的 `value` 值。
+If you want to set the default value for multiple checkbox,
+ the value you pass in needs to be an array containing the `value` of each selected item.
 
-::: tip 提示
-多选框提交后，获得的是一个包含所有选中值的字符串，例如 `1,3,6`
+::: tip
+After submitting a checkbox, you get a string containing all the selected values. eg: `1,3,6`
 :::
 
 ### size
@@ -264,21 +265,21 @@ If you set this value is `true`, this form field is can not edited.
 - **type**: `string`
 - **default**： nothing
 - **usage**：
-单选框的尺寸，可设置的值有：`medium` / `small` / `mini`
+size of checkbox, The values that can be set are `medium` , `small` or `mini`.
 
 ### min
 
 - **type**: `number`
 - **default**： nothing
 - **usage**：
-可被勾选的 checkbox 的最少数量
+Minimum number of the checkbox can be checked.
 
 ### max
 
 - **type**: `number`
 - **default**： nothing
 - **usage**：
-可被勾选的 checkbox 的最多数量
+Maximum number of the checkbox can be checked.
 
 ## checkbox button
 
@@ -287,19 +288,20 @@ If you set this value is `true`, this form field is can not edited.
 - **type**: `array`
 - **must**： **rquired**
 - **usage**：
-多选框的选项数组，每个值需要包含如下字段：
- - `value` : 用于标识该选项的值
- - `text` : 用于标识该选项在表单中显示的名称
+The options array of checkbox button. Each value needs to contain the following fields:
+ - `value` : The value that identifies the option
+ - `text` : Identifies the name of the option as it appears in the form
  
 ### value
 
 - **type**: `array`
 - **default**： nothing
 - **usage**：
-如果要为多选框设置默认值，传入的值需要是一个数组，包含每一已选项的 `value` 值。
+If you want to set the default value for multiple checkbox,
+ the value you pass in needs to be an array containing the `value` of each selected item.
 
-::: tip 提示
-多选框提交后，获得的是一个包含所有选中值的字符串，例如 `1,3,6`
+::: tip
+After submitting a checkbox, you get a string containing all the selected values. eg: `1,3,6`
 :::
 
 ### size
@@ -307,21 +309,21 @@ If you set this value is `true`, this form field is can not edited.
 - **type**: `string`
 - **default**： nothing
 - **usage**：
-单选框的尺寸，可设置的值有：`medium` / `small` / `mini`
+size of checkbox, The values that can be set are `medium` , `small` or `mini`.
 
 ### min
 
 - **type**: `number`
 - **default**： nothing
 - **usage**：
-可被勾选的 checkbox 的最少数量
+Minimum number of the checkbox can be checked.
 
 ### max
 
 - **type**: `number`
 - **default**： nothing
 - **usage**：
-可被勾选的 checkbox 的最多数量
+Maximum number of the checkbox can be checked.
 
 ## select
 
@@ -330,23 +332,24 @@ If you set this value is `true`, this form field is can not edited.
 - **type**: `array`
 - **must**： **rquired**
 - **usage**：
-下列选择器的选项数组，每个值需要包含如下字段：
- - `value` : 用于标识该选项的值
- - `text` : 用于标识该选项在表单中显示的名称
+The options array of select. Each value needs to contain the following fields:
+ - `value` : The value that identifies the option
+ - `text` : Identifies the name of the option as it appears in the form
+ 
 
 ### size
 
 - **type**: `string`
 - **default**： nothing
 - **usage**：
-单选框的尺寸，可设置的值有：`medium` / `small` / `mini`
+size of select, The values that can be set are `medium` , `small` or `mini`.
 
-### clearable	
+### clearable
 
 - **type**: `boolean`
 - **default**： `false`
 - **usage**：
-如果设置为 `true`, 输入框中会显示清空按钮
+whether to show clear button
 
 ## select group
 
@@ -355,40 +358,40 @@ If you set this value is `true`, this form field is can not edited.
 - **type**: `array`
 - **must**： **rquired**
 - **usage**：
-下列选择器的选项数组，每个值需要包含如下字段：
- - `text` : 用于标识该选项分组的名称
- - `children` ：该分组下的选项数组，每个值需要包含 `text`,`value` 字段
+The options array of select group. Each value needs to contain the following fields:
+ - `text` : The name used to identify the group of options
+ - `children`:For the option array under this group, each value needs to contain `text`,`value` fields.
  
 ### size
 
 - **type**: `string`
 - **default**： nothing
 - **usage**：
-单选框的尺寸，可设置的值有：`medium` / `small` / `mini`
+size of select group, The values that can be set are `medium` , `small` or `mini`.
 
 ### clearable	
 
 - **type**: `boolean`
 - **default**： `false`
 - **usage**：
-如果设置为 `true`, 输入框中会显示清空按钮
+whether to show clear button.
 
 ## cascader
 
-### options	
+### options
 
 - **type**: `array`
 - **default**： `[]`
-- **must**： 和 `resource` 不能同时为空
+- **must**： And `resource` cannot be empty at the same time.
 - **usage**：
-可以使用这个参数给级联选择器设置固定的选项
+This parameter can set fixed options for the cascade selector
 
-传入的参数需要是一个树形数组。每个值需要包含如下字段：
- - `value` : 用于标识该选项的值
- - `text` : 用于标识该选项在表单中显示的名称
- - `children`：标识该选项的下级列表，如果为空，请设置为 `[]`
+The parameter passed in needs to be a tree array. Each value needs to contain the following fields:
+ - `value` : The value that identifies the option
+ - `text` : Identifies the name of the option as it appears in the form
+ - `children`:Identifies the lower level list of this option, If it is empty, set it value is `[]`.
  
-例如：
+Example:
 ```php
 $category = [
     [
@@ -422,9 +425,11 @@ $category = [
 
 - **type**: `string`
 - **default**： nothing
-- **要求**： 和 `options` 不能同时为空
+- **must**： And `options` cannot be empty at the same time.
 - **usage**：
-使用这个字段，设置异步加载的接口，路径中需要有 `__pid__` 占位符：
+Use this field to set the API for asynchronous loading,It needs to be in its path`__ pid__ ` place holder.
+
+Example:
 ```html
 <x-input-casacder name="text1" resource="http://xxx.com/category/__pid__"></x-input-casacder>
 ```
@@ -434,10 +439,10 @@ $category = [
 - **type**: `array`
 - **default**： nothing
 - **usage**：
-如果要为级联菜单设置默认值，传入的值需要是一个数组，包含每一级的 `value` 值。
+If you want to set default values for cascading menus, the values you pass in need to be an array.It must contain the `value` value of each level.
 
-::: tip 提示
-级联菜单提交后，获得的是一个包含各级数据的字符串，例如 `1,11,1101` 包含了各级的索引信息
+::: tip
+After the cascading menu is submitted, a string containing data at all levels is obtained. For example, `1,111101` contains index information of all levels
 :::
 
 ### trigger
@@ -445,41 +450,41 @@ $category = [
 - **type**: `string`
 - **default**： `click`
 - **usage**：
-次级菜单的展开方式，可选值有 `click`，`hover`
+How to expand the secondary menu,options contain `click` or `hover`.
 
 ### size
 
 - **type**: `string`
 - **default**： nothing
 - **usage**：
-单选框的尺寸，可设置的值有：`medium` / `small` / `mini`
+size of cascader, The values that can be set are `medium` , `small` or `mini`.
 
 ### clearable	
 
 - **type**: `boolean`
 - **default**： `false`
 - **usage**：
-如果设置为 `true`, 输入框中会显示清空按钮
+whether to show clear button
 
 ### show-all-levels		
 
 - **type**: `boolean`
 - **default**： `false`
 - **usage**：
-输入框中是否显示选中值的完整路径
+Whether to display the full path of the selected value in the input box.
 
 ## time picker
 
-### editable		
+### editable
 
 - **type**: `boolean`
 - **default**： `true`
 - **usage**：
-是否可以在文本框中输入时间，如果设置为 false ,只能选择时间
+Whether the time can be entered in the text box. If it is set to `false`, you only change time with select.
 
 ### size
 
 - **type**: `string`
 - **default**： nothing
 - **usage**：
-单选框的尺寸，可设置的值有：`medium` / `small` / `mini`
+size of time picker, The values that can be set are `medium` , `small` or `mini`.

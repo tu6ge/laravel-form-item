@@ -139,14 +139,14 @@ sidebar: auto
 ### min
 
 - **类型**: `number`
-- **默认值**： 无
+- **默认值**： 负无穷
 - **用法**：
 计数器的最小可设置值
 
 ### max
 
 - **类型**: `number`
-- **默认值**： 无
+- **默认值**： 正无穷
 - **用法**：
 计数器的最大可设置值
 
@@ -264,7 +264,7 @@ sidebar: auto
 - **类型**: `string`
 - **默认值**： 无
 - **用法**：
-单选框的尺寸，可设置的值有：`medium` / `small` / `mini`
+多选框的尺寸，可设置的值有：`medium` / `small` / `mini`
 
 ### min
 
@@ -287,7 +287,7 @@ sidebar: auto
 - **类型**: `array`
 - **要求**： **必填**
 - **用法**：
-多选框的选项数组，每个值需要包含如下字段：
+多选按钮的选项数组，每个值需要包含如下字段：
  - `value` : 用于标识该选项的值
  - `text` : 用于标识该选项在表单中显示的名称
  
@@ -307,7 +307,7 @@ sidebar: auto
 - **类型**: `string`
 - **默认值**： 无
 - **用法**：
-单选框的尺寸，可设置的值有：`medium` / `small` / `mini`
+多选按钮的尺寸，可设置的值有：`medium` / `small` / `mini`
 
 ### min
 
@@ -339,7 +339,7 @@ sidebar: auto
 - **类型**: `string`
 - **默认值**： 无
 - **用法**：
-单选框的尺寸，可设置的值有：`medium` / `small` / `mini`
+下拉选择器的尺寸，可设置的值有：`medium` / `small` / `mini`
 
 ### clearable	
 
@@ -364,7 +364,7 @@ sidebar: auto
 - **类型**: `string`
 - **默认值**： 无
 - **用法**：
-单选框的尺寸，可设置的值有：`medium` / `small` / `mini`
+下拉选择器的尺寸，可设置的值有：`medium` / `small` / `mini`
 
 ### clearable	
 
@@ -452,7 +452,7 @@ $category = [
 - **类型**: `string`
 - **默认值**： 无
 - **用法**：
-单选框的尺寸，可设置的值有：`medium` / `small` / `mini`
+级联选择器的尺寸，可设置的值有：`medium` / `small` / `mini`
 
 ### clearable	
 

@@ -3,8 +3,9 @@
 ## Basic usage
 
 <demo-block>
-在 php 文件中构建选项数组，要求每个数组中必须有 `value` , `text` 和 `children` ，分别表示选项的值,显示的文本
-和下级数据数组
+First of all, we build an array of options in the PHP file. Each array must contain `value`,`text` and `children`,
+which represent the value of options and the displayed text respectively and subordinate data array.
+
 ::: slot source
 <el-cascader v-model="cascader1" :options="options1">
 </el-cascader>
@@ -16,47 +17,44 @@ Route::get('demo', function() {
         'cascader1_option' => [
             [
                 'value' => 1,
-                'text' => '水果',
+                'text' => 'Fruits',
                 'children' => [
                     [
                         'value' => 11,
-                        'text' => '苹果',
+                        'text' => 'Apply',
                         'children' => [
                             [
                                 'value' => 1101,
-                                'text'  => '富士苹果'
+                                'text'  => 'Fuji apple'
                             ]
                         ]
                     ],
                     [
                         'value' => 12,
-                        'text' => '香蕉'
+                        'text' => 'Banana'
                     ],
                 ]
             ],
             [
                 'value' => 2,
-                'text' => '蔬菜',
+                'text' => 'Vegetables',
                 'children' => []
             ]
         ],
     ]);
 });
 ```
-在 `demo-view` 视图文件中将 `$cascader1_option` 传递给 `input-cascader` 组件
+In the `demo-view` view file, set `$cascader1_option` is passed to the `input-cascader` component.
 ``` html
 <x-input-cascader name="cascader1" :options="$cascader1_option" ></x-input-cascader>
 ```
 :::
 </demo-block>
 
-## 设置默认值
+## Set default value
 
 <demo-block>
-value 值需要赋值为一个数组，包含每个级别的索引
-
-在 php 文件中构建选项数组，要求每个数组中必须有 `value` , `text` 和 `children` ，分别表示选项的值,显示的文本
-和下级数据数组
+The value needs to be assigned to an array containing the index of each level.
 ::: slot source
 <el-cascader v-model="cascader2" :options="options1">
 </el-cascader>
@@ -68,123 +66,121 @@ Route::get('demo', function() {
         'cascader1_option' => [
             [
                 'value' => 1,
-                'text' => '水果',
+                'text' => 'Fruits',
                 'children' => [
                     [
                         'value' => 11,
-                        'text' => '苹果',
+                        'text' => 'Apply',
                         'children' => [
                             [
                                 'value' => 1101,
-                                'text'  => '富士苹果'
+                                'text'  => 'Fuji apple'
                             ]
                         ]
                     ],
                     [
                         'value' => 12,
-                        'text' => '香蕉'
+                        'text' => 'Banana'
                     ],
                 ]
             ],
             [
                 'value' => 2,
-                'text' => '蔬菜',
+                'text' => 'Vegetables',
                 'children' => []
             ]
         ],
     ]);
 });
 ```
-在 `demo-view` 视图文件中将 `$cascader1_option` 传递给 `input-cascader` 组件
+In the `demo-view` view file, set `$cascader1_option` is passed to the `input-cascader` component, and set default value.
 ``` html
 <x-input-cascader name="cascader1" :options="$cascader1_option" :value="[1,11,1101]"></x-input-cascader>
 ```
 :::
 </demo-block>
 
-## 禁用某些选项
+## Disable some options
 
 <demo-block>
-value 值需要赋值为一个数组，包含每个级别的值
+First of all, we build an array of options in the PHP file. Each array must contain `value`,`text` and `children`,
+which represent the value of options and the displayed text respectively and subordinate data array.
 
-在 php 文件中构建选项数组，要求每个数组中必须有 `value` , `text` 和 `children` ，分别表示选项的值,显示的文本
-和下级数据数组
 ::: slot source
 <el-cascader v-model="cascader2" :options="options2">
 </el-cascader>
 :::
 ::: slot highlight
-``` php
+```php
 Route::get('demo', function() {
     return view('demo-view', [
         'cascader1_option' => [
             [
                 'value' => 1,
-                'text' => '水果',
+                'text' => 'Fruits',
                 'children' => [
                     [
                         'value' => 11,
-                        'text' => '苹果',
+                        'text' => 'Apply',
                         'children' => [
                             [
                                 'value' => 1101,
-                                'text'  => '富士苹果'
+                                'text'  => 'Fuji apple',
                             ]
                         ]
                     ],
                     [
                         'value' => 12,
-                        'text' => '香蕉'
-                        'disabled' => true, // 禁止选择香蕉
+                        'text' => 'Banana'
+                        'disabled' => true, // Disabled select Banana
                     ],
                 ]
             ],
             [
                 'value' => 2,
-                'text' => '蔬菜',
+                'text' => 'Vegetables',
                 'children' => []
             ]
         ],
     ]);
 });
 ```
-在 `demo-view` 视图文件中将 `$cascader1_option` 传递给 `input-cascader` 组件
-``` html
+In the `demo-view` view file, set `$cascader1_option` is passed to the `input-cascader` component, and set default value.
+```html
 <x-input-cascader name="cascader1" :options="$cascader1_option" :value="[1,11,1101]"></x-input-cascader>
 ```
 :::
 </demo-block>
 
-## 选项数组约定
+## Option array conventions
 
-我们对级联选择器中用到的每一级的选项数据进行了约定，每个选项需要有如下字段：
+We have agreed on the option data of each level used in the cascade selector. Each option needs to have the following fields:
 
-| 字段 | 是否必填 | 格式 | 说明|
+| Field | Required | Type | Description |
 |----|----|----|---|
-| value | 必填| int 或 string | 选项的值，最终传递给 `form` 表单的数据 |
-| text | 必填|string | 选项的显示信息，用于单选框的显示 |
-| disabled | 选填 | bool | 是否禁用该选项，默认是 `false` |
-| children | 选填 | array | 该选项对应的下级选项数组，没有下级，可以为空 |
+| value | Required| int or string | The value of the option, which is finally passed to the form |
+| text | Required | string | Option is used to display the page |
+| disabled | No Required | bool | disable option or not,default is `false` |
+| children | No Required | array | The lower level option array corresponding to this option. If there is no lower level, you should set it `[]` |
 
-## 异步加载
+## Asynchronous loading
 
-如果你的选择器中每一级的数据比较多，一次全部加载是不可行的。所以我们提供了一个 `resource` 选项，你只需设置一个 GET 请求的接口，并把该接口路径
-设置到 `resource` 选项中，例如：
+If you have more data in each level of your selector, it is not feasible to load all at once. So we provide a `resource` option. You only need to set an API for GET requests and set the API path Set to the `resource` option, for example:
 ```php
 <x-input-cascader name="aaa2" resource="get_child_url/__pid__"></x-input-cascader>
 ```
 
-你可能发现了上例中的 `__pid__` ，这是一个参数的标识位，在请求第一级数据的时候，会先把它更该为 0 再请求接口，如果需要请求某个选项的第二级数据，
-则组件会自动使用该选项的值替换掉 `__pid__` ，然后请求接口，用来获取该分类的下级
+You may have found the one in the above example`__ pid__ `,this is the identification bit of a parameter. When the first level data is requested, it will be changed to `0` , and then the API will be requested. If the second level data of an option needs to be requested,
+The component is automatically replaced with the value of this option`__ pid__ ` , then request the API to get the lower level of the classification.
 
-这意味着，你在开发接口的时候，需要包含以下字段，用来标识选项的信息
+This means that when you develop an API, you need to include the following fields to identify the options
 
-| 字段 | 是否必填 | 格式 | 说明|
+| Field | Required | Type | Description |
 |----|----|----|---|
-| value | 必填| int 或 string | 选项的值，最终传递给 `form` 表单的数据 |
-| text | 必填|string | 选项的显示信息，用于单选框的显示 |
-| leaf | 必填 | bool | 标识该节点是否是最终节点，是则返回 `true`, 不是则返回 `false` |
-| disabled | 选填 | bool | 是否禁用该选项，默认是 `false` |
+| value | Required| int or string | The value of the option, which is finally passed to the form |
+| text | Required|string | Option is used to display the page |
+| leaf | Required | bool | Identifies whether the node is the final node, If it is final ,it should return `true`, otherwise return `false` |
+| disabled | No Required | bool | disable option or not,default is `false` |
 
 <script>
 export default {
@@ -195,55 +191,55 @@ export default {
             options1:[
                 {
                     'value' : 1,
-                    'label' : '水果',
+                    'label' : 'Fruits',
                     'children' : [
                         {
                             'value' : 11,
-                            'label' : '苹果',
+                            'label' : 'Apply',
                             'children' : [
                                 {
                                     'value' : 1101,
-                                    'label'  : '富士苹果'
+                                    'label'  : 'Fuji apple'
                                 }
                             ]
                         },
                         {
                             'value' : 12,
-                            'label' : '香蕉',
+                            'label' : 'Banana',
                         },
                     ]
                 },
                 {
                     'value' : 2,
-                    'label' : '蔬菜',
+                    'label' : 'Vegetables',
                     'children' : []
                 }
             ],
             options2:[
                 {
                     'value' : 1,
-                    'label' : '水果',
+                    'label' : 'Fruits',
                     'children' : [
                         {
                             'value' : 11,
-                            'label' : '苹果',
+                            'label' : 'Apply',
                             'children' : [
                                 {
                                     'value' : 1101,
-                                    'label'  : '富士苹果'
+                                    'label'  : 'Fuji apple'
                                 }
                             ]
                         },
                         {
                             'value' : 12,
-                            'label' : '香蕉',
+                            'label' : 'Banana',
                             'disabled': true,
                         },
                     ]
                 },
                 {
                     'value' : 2,
-                    'label' : '蔬菜',
+                    'label' : 'Vegetables',
                     'children' : []
                 }
             ],
