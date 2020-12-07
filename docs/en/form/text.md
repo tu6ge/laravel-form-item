@@ -4,20 +4,20 @@
 
 <demo-block>
 ::: slot source
-<el-input placeholder="请输入内容" v-model="text1"></el-input>
+<el-input placeholder="Please enter the content" v-model="text1"></el-input>
 :::
 ::: slot highlight
 ``` html
-<x-input-text name="text1" placeholder="请输入内容"></x-input-text>
+<x-input-text name="text1" placeholder="Please enter the content"></x-input-text>
 ```
 :::
 </demo-block>
 
-## 限定输入字数
+## Limit length of input
 
 <demo-block>
 ::: slot source
-<el-input placeholder="请输入内容" v-model="text2" maxlength=10 show-word-limit></el-input>
+<el-input placeholder="Please enter the content" v-model="text2" maxlength=10 show-word-limit></el-input>
 :::
 ::: slot highlight
 ``` html
@@ -27,10 +27,10 @@
 </demo-block>
 
 ::: tip
-要了解更多属性的用法，请查看 [API](/en/api.html#text) 
+To learn more about the use of properties, see [API](/en/api.html#text) 
 :::
 
-## 文本域
+## Textarea
 
 <demo-block>
 ::: slot source

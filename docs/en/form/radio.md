@@ -3,165 +3,169 @@
 ## Basic usage
 
 <demo-block>
-默认选中苹果
+Default selected is Apple.
 ::: slot source
 <el-radio-group v-model="radio1">
-<el-radio :label="11">西瓜</el-radio>
-<el-radio :label="22">苹果</el-radio>
-<el-radio :label="23">香蕉</el-radio>
+<el-radio :label="11">Watermelon</el-radio>
+<el-radio :label="22">Apple</el-radio>
+<el-radio :label="23">Banana</el-radio>
 </el-radio-group>
 :::
 ::: slot highlight
-在 php 文件中构建选项数组，要求每个数组中必须有 `value` 和 `text` ，分别表示选项的值和显示的文本
+To build an array of options in PHP file, each array must have `value` and `text`,
+ which represent the value of options and the displayed text, respectively.
 ``` php
 Route::get('demo', function() {
     return view('demo-view', [
         'radio1_option' => [
             [
                 'value' => 11,
-                'text' => '西瓜'
+                'text' => 'Watermelon'
             ],
             [
                 'value' => 22,
-                'text'  => '苹果'
+                'text'  => 'Apple'
             ],
             [
                 'value' => 23,
-                'text'  => '香蕉',
+                'text'  => 'Banana',
             ]
         ],
     ]);
 });
 ```
-在 `demo-view` 视图文件中将 `$radio1_option` 传递给 `input-radio` 组件
+In the `demo-view` view file, set `$radio1_option` is passed to the `input-radio` component.
 ``` html
 <x-input-radio name="radio1" :options="$radio1_option" :value="22" ></x-input-radio>
 ```
 :::
 </demo-block>
 
-## 禁用某些选项
+## Disabled some options
 
 <demo-block>
-禁止选择香蕉
+Disabled banana.
 ::: slot source
 <el-radio-group v-model="radio2">
-<el-radio :label="11">西瓜</el-radio>
-<el-radio :label="22">苹果</el-radio>
-<el-radio :label="23" disabled>香蕉</el-radio>
+<el-radio :label="11">Watermelon</el-radio>
+<el-radio :label="22">Apple</el-radio>
+<el-radio :label="23" disabled>Banana</el-radio>
 </el-radio-group>
 :::
 ::: slot highlight
-在 php 文件中构建选项数组，要求每个数组中必须有 `value` 和 `text` ，分别表示选项的值和显示的文本
+To build an array of options in PHP file, each array must have `value` and `text`,
+ which represent the value of options and the displayed text, respectively.
 ``` php
 Route::get('demo', function() {
     return view('demo-view', [
         'radio1_option' => [
             [
                 'value' => 11,
-                'text' => '西瓜'
+                'text' => 'Watermelon'
             ],
             [
                 'value' => 22,
-                'text'  => '苹果'
+                'text'  => 'Apple'
             ],
             [
                 'value' => 23,
-                'text'  => '香蕉',
-                'prop'  => 'disabled', // 禁用该选项
+                'text'  => 'Banana',
+                'prop'  => 'disabled', // This option is disabled.
             ]
         ],
     ]);
 });
 ```
-在 `demo-view` 视图文件中将 `$radio1_option` 传递给 `input-radio` 组件
+In the `demo-view` view file, set `$radio1_option` is passed to the `input-radio` component.
 ``` html
 <x-input-radio name="radio1" :options="$radio1_option" :value="22" ></x-input-radio>
 ```
 :::
 </demo-block>
 
-## 按钮样式
+## Button Style
 
 <demo-block>
-默认选中苹果
+Default Selected is Apple.
 ::: slot source
 <el-radio-group v-model="radio3">
-<el-radio-button :label="11">西瓜</el-radio-button>
-<el-radio-button :label="22">苹果</el-radio-button>
-<el-radio-button :label="23">香蕉</el-radio-button>
+<el-radio-button :label="11">Watermelon</el-radio-button>
+<el-radio-button :label="22">Apple</el-radio-button>
+<el-radio-button :label="23">Banana</el-radio-button>
 </el-radio-group>
 :::
 ::: slot highlight
-在 php 文件中构建选项数组，要求每个数组中必须有 `value` 和 `text` ，分别表示选项的值和显示的文本
+To build an array of options in PHP file, each array must have `value` and `text`,
+ which represent the value of options and the displayed text, respectively.
 ``` php
 Route::get('demo', function() {
     return view('demo-view', [
         'radio3_option' => [
             [
                 'value' => 11,
-                'text' => '西瓜'
+                'text' => 'Watermelon'
             ],
             [
                 'value' => 22,
-                'text'  => '苹果'
+                'text'  => 'Apple'
             ],
             [
                 'value' => 23,
-                'text'  => '香蕉',
-                //'prop'  => 'disabled', // 按钮样式也可以禁用某些选项
+                'text'  => 'Banana',
+                // 'prop'  => 'disabled', // This option is disabled.
             ]
         ],
     ]);
 });
 ```
-在 `demo-view` 视图文件中将 `$radio3_option` 传递给 `input-radio-button` 组件
+In the `demo-view` view file, set `$radio3_option` is passed to the `input-radio-button` component.
 ``` html
 <x-input-radio-button name="radio1" :options="$radio3_option" :value="22" ></x-input-radio-button>
 ```
 :::
 </demo-block>
 
-## 按钮尺寸
+## Button Size
 
 <demo-block>
-默认选中苹果
+Default Selected is Apple.
 ::: slot source
 <p>
 <el-radio-group v-model="radio3">
-<el-radio-button :label="11">西瓜</el-radio-button>
-<el-radio-button :label="22">苹果</el-radio-button>
-<el-radio-button :label="23">香蕉</el-radio-button>
+<el-radio-button :label="11">Watermelon</el-radio-button>
+<el-radio-button :label="22">Apple</el-radio-button>
+<el-radio-button :label="23">Banana</el-radio-button>
 </el-radio-group>
 </p>
 <p>
 <el-radio-group v-model="radio3" size="medium">
-<el-radio-button :label="11">西瓜</el-radio-button>
-<el-radio-button :label="22">苹果</el-radio-button>
-<el-radio-button :label="23">香蕉</el-radio-button>
+<el-radio-button :label="11">Watermelon</el-radio-button>
+<el-radio-button :label="22">Apple</el-radio-button>
+<el-radio-button :label="23">Banana</el-radio-button>
 </el-radio-group>
 </p>
 <p>
 <el-radio-group v-model="radio3" size="small">
-<el-radio-button :label="11">西瓜</el-radio-button>
-<el-radio-button :label="22">苹果</el-radio-button>
-<el-radio-button :label="23">香蕉</el-radio-button>
+<el-radio-button :label="11">Watermelon</el-radio-button>
+<el-radio-button :label="22">Apple</el-radio-button>
+<el-radio-button :label="23">Banana</el-radio-button>
 </el-radio-group>
 </p>
 <p>
 <el-radio-group v-model="radio3" size="mini">
-<el-radio-button :label="11">西瓜</el-radio-button>
-<el-radio-button :label="22">苹果</el-radio-button>
-<el-radio-button :label="23">香蕉</el-radio-button>
+<el-radio-button :label="11">Watermelon</el-radio-button>
+<el-radio-button :label="22">Apple</el-radio-button>
+<el-radio-button :label="23">Banana</el-radio-button>
 </el-radio-group>
 </p>
 :::
 ::: slot highlight
-在 php 文件中构建选项数组，要求每个数组中必须有 `value` 和 `text` ，分别表示选项的值和显示的文本
+To build an array of options in PHP file, each array must have `value` and `text`,
+ which represent the value of options and the displayed text, respectively.
 ``` php
- // ... 省略 php 代码
+ // ... This is PHP code.
 ```
-在 `demo-view` 视图文件中将 `$radio3_option` 传递给 `input-radio-button` 组件
+In the `demo-view` view file, set `$radio3_option` is passed to the `input-radio-button` component.
 ``` html
 <x-input-radio-button name="radio1" :options="$radio3_option" :value="22" ></x-input-radio-button>
 <x-input-radio-button name="radio1" :options="$radio3_option" :value="22" size="medium"></x-input-radio-button>
@@ -171,15 +175,15 @@ Route::get('demo', function() {
 :::
 </demo-block>
 
-## 选项数组约定
+## Option Array Rule
 
-我们对单选框中用到的选项数据进行了约定，每个选项需要有如下字段：
+We have agreed on the option data used in the radio. Each option needs to have the following fields:
 
-| 字段 | 是否必填 | 格式 | 说明|
+| Field | Required | Type | Description |
 |----|----|----|---|
-| value | 必填| int 或 string | 选项的值，最终传递给 `form` 表单的数据 |
-| text | 必填|string | 选项的显示信息，用于单选框的显示 |
-| prop | 选填 | string | 用于控制单个选项的某些特性，如 `disabled` ，了解更多请查看[API](/en/api.html#radio) |
+| value | Required| int or string | The value of the option, which is finally passed to the form |
+| text | Required|string | Option is used to display the page |
+| prop | No Required | string | It is used to control certain features of a single option, eg: `disabled`, see [API docs](/en/api.html#radio) look more. |
 
 <script>
 export default {

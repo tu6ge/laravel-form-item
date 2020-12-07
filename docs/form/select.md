@@ -33,7 +33,7 @@ Route::get('demo', function() {
     ]);
 });
 ```
-在 `demo-view` 视图文件中将 `$select1_option` 传递给 `input-radio` 组件
+在 `demo-view` 视图文件中将 `$select1_option` 传递给 `input-select` 组件
 ``` html
 <x-input-select name="select1" :options="$select1_option" :value="22" ></x-input-select>
 ```
@@ -104,7 +104,7 @@ Route::get('demo', function() {
     ]);
 });
 ```
-在 `demo-view` 视图文件中将 `$select2_option` 传递给 `input-radio` 组件
+在 `demo-view` 视图文件中将 `$select2_option` 传递给 `input-select-group` 组件
 ``` html
 <x-input-select-group name="select2" :options="$select2_option" :value="22" ></x-input-select-group>
 ```
@@ -115,7 +115,7 @@ Route::get('demo', function() {
 
 我们对下拉列表中用到的选项数据进行了约定，每个选项需要有如下字段。
 
-- 下列列表选项：
+- 下拉列表选项：
 
 | 字段 | 是否必填 | 格式 | 说明|
 |----|----|----|---|

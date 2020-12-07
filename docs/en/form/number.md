@@ -3,7 +3,7 @@
 ## Basic usage
 
 <demo-block>
-默认值 2 
+default value is 2.
 ::: slot source
 <el-input-number v-model="number1"></el-input-number>
 :::
@@ -14,7 +14,7 @@
 :::
 </demo-block>
 
-## 禁用状态
+## Disabled
 
 <demo-block>
 &nbsp;
@@ -28,7 +28,7 @@
 :::
 </demo-block>
 
-## 步数
+## Step
 
 <demo-block>
 &nbsp;

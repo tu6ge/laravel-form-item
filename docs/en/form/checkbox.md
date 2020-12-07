@@ -3,148 +3,151 @@
 ## Basic usage
 
 <demo-block>
-默认值需要传一个数组
+The default value needs to pass an array
 ::: slot source
 <el-checkbox-group v-model="checkbox1">
-<el-checkbox label="watermelon">西瓜</el-checkbox>
-<el-checkbox label="apple">苹果</el-checkbox>
-<el-checkbox label="banana">香蕉</el-checkbox>
+<el-checkbox label="watermelon">Watermelon</el-checkbox>
+<el-checkbox label="apple">Apple</el-checkbox>
+<el-checkbox label="banana">Banana</el-checkbox>
 </el-checkbox-group>
 :::
 ::: slot highlight
-在 php 文件中构建选项数组，要求每个数组中必须有 `value` 和 `text` ，分别表示选项的值和显示的文本
+To build an array of options in PHP file, each array must have `value` and `text`,
+ which represent the value of options and the displayed text, respectively.
 ``` php
 Route::get('demo', function() {
     return view('demo-view', [
-        'checkbox1_value' => [ // 默认值是一个数组
+        'checkbox1_value' => [ // The default value is an array.
             'apple',
             'banana',
         ],
         'checkbox1_option' => [
             [
                 'value' => 'watermelon',
-                'text' => '西瓜'
+                'text' => 'Watermelon'
             ],
             [
                 'value' => 'apple',
-                'text'  => '苹果',
+                'text'  => 'Apple',
             ],
             [
                 'value' => 'banana',
-                'text'  => '香蕉'
+                'text'  => 'Banana'
             ]
         ],
     ]);
 });
 ```
-在 `demo-view` 视图文件中将 `$checkbox1_option`,`$checkbox1_value` 传递给 `input-checkbox` 组件
+In the `demo-view` view file, set `$checkbox1_option` and `$checkbox1_value` is passed to the `input-checkbox` component.
 ``` html
 <x-input-checkbox name="checkbox1" :options="$checkbox1_option" :value="$checkbox1_value"></x-input-checkbox>
 ```
 :::
 </demo-block>
 
-::: tip 提示
-提交表单后，多选框的值是一个形如 `11,22` 的字符串，请自行使用 `explode` 或其他方式转化成数组
+::: tip
+After submitting the form, the value of the checkbox is a string in the format of `11,22`.
+Please use `explode` or other methods to convert it into an array.
 :::
 
-## 禁用某些选项
+## Disable some options
 
 <demo-block>
-默认值需要传一个数组
+The default value needs to pass an array
 ::: slot source
 <el-checkbox-group v-model="checkbox2">
-<el-checkbox label="watermelon">西瓜</el-checkbox>
-<el-checkbox label="apple">苹果</el-checkbox>
-<el-checkbox label="banana" disabled>香蕉</el-checkbox>
+<el-checkbox label="watermelon">Watermelon</el-checkbox>
+<el-checkbox label="apple">Apple</el-checkbox>
+<el-checkbox label="banana">Banana</el-checkbox>
 </el-checkbox-group>
 :::
 ::: slot highlight
-在 php 文件中构建选项数组，要求每个数组中必须有 `value` 和 `text` ，分别表示选项的值和显示的文本
+To build an array of options in PHP file, each array must have `value` and `text`,
+ which represent the value of options and the displayed text, respectively.
 ``` php
 Route::get('demo', function() {
     return view('demo-view', [
-        'checkbox1_value' => [ // 默认值是一个数组
+        'checkbox1_value' => [ // The default value is an array.
             'apple',
         ],
         'checkbox1_option' => [
             [
                 'value' => 'watermelon',
-                'text' => '西瓜'
+                'text' => 'Watermelon',
             ],
             [
                 'value' => 'apple',
-                'text'  => '苹果',
+                'text'  => 'Apple',
             ],
             [
                 'value' => 'banana',
-                'text'  => '香蕉',
-                'prop'  => 'disabled',
+                'text'  => 'Banana',
             ]
         ],
     ]);
 });
 ```
-在 `demo-view` 视图文件中将 `$checkbox1_option`,`$checkbox1_value` 传递给 `input-checkbox` 组件
+In the `demo-view` view file, set `$checkbox1_option` and `$checkbox1_value` is passed to the `input-checkbox` component.
 ``` html
 <x-input-checkbox name="checkbox1" :options="$checkbox1_option" :value="$checkbox1_value"></x-input-checkbox>
 ```
 :::
 </demo-block>
 
-## 按钮样式
+## Button Style
 
 <demo-block>
-默认值需要传一个数组
+The default value needs to pass an array
 ::: slot source
 <el-checkbox-group v-model="checkbox1">
-<el-checkbox-button label="watermelon">西瓜</el-checkbox-button>
-<el-checkbox-button label="apple">苹果</el-checkbox-button>
-<el-checkbox-button label="banana">香蕉</el-checkbox-button>
+<el-checkbox-button label="watermelon">Watermelon</el-checkbox-button>
+<el-checkbox-button label="apple">Apple</el-checkbox-button>
+<el-checkbox-button label="banana">Banana</el-checkbox-button>
 </el-checkbox-group>
 :::
 ::: slot highlight
-在 php 文件中构建选项数组，要求每个数组中必须有 `value` 和 `text` ，分别表示选项的值和显示的文本
+To build an array of options in PHP file, each array must have `value` and `text`,
+ which represent the value of options and the displayed text, respectively.
 ``` php
 Route::get('demo', function() {
     return view('demo-view', [
-        'checkbox1_value' => [ // 默认值是一个数组
+        'checkbox1_value' => [ // The default value is an array.
             'apple',
             'banana',
         ],
         'checkbox1_option' => [
             [
                 'value' => 'watermelon',
-                'text' => '西瓜'
+                'text' => 'Watermelon'
             ],
             [
                 'value' => 'apple',
-                'text'  => '苹果',
+                'text'  => 'Apple',
             ],
             [
                 'value' => 'banana',
-                'text'  => '香蕉'
+                'text'  => 'Banana'
             ]
         ],
     ]);
 });
 ```
-在 `demo-view` 视图文件中将 `$checkbox1_option`,`$checkbox1_value` 传递给 `input-checkbox` 组件
+In the `demo-view` view file, set `$checkbox1_option` and `$checkbox1_value` is passed to the `input-checkbox` component.
 ``` html
 <x-input-checkbox-button name="checkbox1" :options="$checkbox1_option" :value="$checkbox1_value"></x-input-checkbox-button>
 ```
 :::
 </demo-block>
 
-## 选项数组约定
+## Option Array Rule
 
-我们对多选框中用到的选项数据进行了约定，每个选项需要有如下字段：
+We have agreed on the option data used in the checkbox. Each option needs to have the following fields:
 
-| 字段 | 是否必填 | 格式 | 说明|
+| Field | Required | Type | Description |
 |----|----|----|---|
-| value | 必填| int 或 string | 选项的值，最终传递给 `form` 表单的数据 |
-| text | 必填|string | 选项的显示信息，用于单选框的显示 |
-| prop | 选填 | string | 用于控制单个选项的某些特性，如 `disabled` ，了解更多请查看[API](/en/api.html#checkbox) |
+| value | Required| int or string | The value of the option, which is finally passed to the form |
+| text | Required|string | Option is used to display the page |
+| prop | No Required | string | It is used to control certain features of a single option, eg: `disabled`, see [API docs](/en/api.html#checkbox) look more. |
 
 <script>
 export default {

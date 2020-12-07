@@ -3,7 +3,7 @@
 ## Basic usage
 
 <demo-block>
-时间选择器，可以是时分秒，也可以是时分，默认是时分
+Time picker value format, can be hour,minute,second, also can be hour,minute, the default is hour,minute
 ::: slot source
 <el-time-select v-model="time_select1">
 </el-time-select>
@@ -16,14 +16,14 @@
 :::
 </demo-block>
 
-::: tip 提示
-时间选择器，默认开始时间是 `09:00` ,结束时间 `18:00`， 时间间隔是 `30` 分钟，如需修改，请查看 [API](/en/api.html#time-picker) 文档
+::: tip
+The default start time of time picker is `09:00` ,and the default end time of time picker is `18:00`. The time interval is 30 minutes. If you need to modify it, see [API](/en/api.html#time-picker) 
 :::
 
-## 有默认值
+## Default Value
 
 <demo-block>
-时间选择器，可以是时分秒，也可以是时分，默认是时分
+Time picker value format, can be hour,minute,second, also can be hour,minute, the default is hour,minute
 ::: slot source
 <el-time-select v-model="time_select2">
 </el-time-select>
@@ -36,10 +36,10 @@
 :::
 </demo-block>
 
-## 时间范围
+## Range
 
 <demo-block>
-时间选择器，可以是时分秒，也可以是时分，默认是时分
+Time picker value format, can be hour,minute,second, also can be hour,minute, the default is hour,minute
 ::: slot source
 <el-time-picker v-model="time_select3" is-range>
 </el-time-picker>
@@ -52,10 +52,10 @@
 :::
 </demo-block>
 
-## 有默认值的时间范围
+## Default Value Of Time Range
 
 <demo-block>
-时间选择器，可以是时分秒，也可以是时分，默认是时分
+Time picker value format, can be hour,minute,second, also can be hour,minute, the default is hour,minute
 ::: slot source
 <el-time-picker v-model="time_select4" is-range>
 </el-time-picker>
@@ -68,8 +68,8 @@
 :::
 </demo-block>
 
-::: tip 提示
-日期选择器用到了前端 `dayjs` 库，以及该库的 `utc` 插件和 `customParseFormat` 插件，如果页面中已经引入了这个库或者插件，请根据 [文档](/guide/getting-started.html#自定义配置) 修改相应的配置
+::: tip
+time picker is useing `dayjs` npm, and plugin of this package ,eg: `utc` and `customParseFormat`, If you have already introduced this library or plug-in to your page, please click [docs](/en/guide/getting-started.html#custom-config) ,update configure.
 :::
 
 <script>
