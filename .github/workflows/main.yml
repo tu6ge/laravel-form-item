@@ -71,7 +71,7 @@ jobs:
       - name: Install PHP Coveralls library
         env:
           PHP_VERSION: ${{ matrix.php }}
-        run: composer global require --dev twinh/php-coveralls
+        run: composer global require --dev php-coveralls/php-coveralls
 
       - name: Upload coverage results to Coveralls
         env:
