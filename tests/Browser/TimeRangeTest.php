@@ -18,8 +18,13 @@ class TimeRangeTest extends BrowserTestCase
                     $table->click('.el-date-editor:first-child .el-range-input:nth-child(2)')
                         ->keys('.el-date-editor:first-child .el-range-input:nth-child(2)', '12:34:56')
                         ->click('.el-date-editor:first-child .el-range-input:nth-child(4)')
-                        ->keys('.el-date-editor:first-child .el-range-input:nth-child(4)', '13:01:07');
+                        ->keys(
+                            '.el-date-editor:first-child .el-range-input:nth-child(4)',
+                            ['{control}', 'a'],
+                            '13:01:07'
+                        );
                 })
+                ->pause(200)
                 ->click('#submit')
                 ->assertSee('"bar_name":"12:34:56,13:01:07"');
         });
@@ -36,7 +41,11 @@ class TimeRangeTest extends BrowserTestCase
                     $table->click('.el-date-editor:first-child .el-range-input:nth-child(2)')
                         ->keys('.el-date-editor:first-child .el-range-input:nth-child(2)', '12:34:56')
                         ->click('.el-date-editor:first-child .el-range-input:nth-child(4)')
-                        ->keys('.el-date-editor:first-child .el-range-input:nth-child(4)', '13:01:22');
+                        ->keys(
+                            '.el-date-editor:first-child .el-range-input:nth-child(4)',
+                            ['{control}', 'a'],
+                            '13:01:22'
+                        );
                 })
                 ->click('#submit-edit')
                 ->assertSee('"bar_name_edit":"12:34:56,13:01:22"');
