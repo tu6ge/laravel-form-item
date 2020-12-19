@@ -59,6 +59,9 @@ jobs:
 
       # Run phpunit tests
       - name: Run tests
+        if: ${{ matrix.laravel == '7.*' }}
+        run: ./vendor/bin/phpunit --configuration=phpunit-laravel7.xml --coverage-clover build/logs/clover.xml
+        else:
         run: ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 
       - name: Upload Failed Screenshots
