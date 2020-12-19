@@ -21,7 +21,7 @@ class Checkbox extends InputAbstract
      *
      * @var array
      */
-    public array $arr_value;
+    public $arr_value;
 
     public function __construct(
         $name,

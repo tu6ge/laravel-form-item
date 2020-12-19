@@ -34,7 +34,7 @@ abstract class InputAbstract extends Component
      *
      * @var string
      */
-    public string $type = '';
+    public $type = '';
 
     public function __construct($name, $value = null, $id = null, $type = '')
     {

@@ -9,7 +9,7 @@ class TimeSelect extends InputAbstract
      *
      * @var array
      */
-    public array $picker_options = [];
+    public $picker_options = [];
 
     public function __construct(
         $name,

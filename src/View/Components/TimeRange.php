@@ -9,20 +9,20 @@ class TimeRange extends InputAbstract
      *
      * @var array
      */
-    public array $array_value = [];
+    public $array_value = [];
     /**
      * set default value format ,eg: hh:mm:ss .
      *
      * @var string
      */
-    public string $format = '';
+    public $format = '';
 
     /**
      * set element UI component time-picker picker_options.
      *
      * @var array
      */
-    public array $picker_options = [];
+    public $picker_options = [];
 
     public function __construct(
         $name,

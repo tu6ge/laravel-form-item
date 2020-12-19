@@ -21,16 +21,16 @@ class Cascader extends InputAbstract
     /**
      * asynchronous request url.
      *
-     * @string
+     * @var string
      */
-    public string $resource;
+    public $resource;
 
     /**
      * There are two ways (hover or click) to expand child option items.
      *
      * @var string
      */
-    public string $trigger = 'click';
+    public $trigger = 'click';
 
     public function __construct(
         $name,
