@@ -58,10 +58,11 @@ jobs:
         run: composer show laravel/framework
 
       # Run phpunit tests
-      - name: Run tests
-        if: ${{ matrix.laravel == '7.*' }}
+      - if: ${{ matrix.laravel == '7.*' }}
+        name: Run tests in Laravel 7.x
         run: ./vendor/bin/phpunit --configuration=phpunit-laravel7.xml --coverage-clover build/logs/clover.xml
-        if: ${{ matrix.laravel != '7.*' }}
+      - if: ${{ matrix.laravel != '7.*' }}
+        name: Run tests in Laravel 8.x
         run: ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 
       - name: Upload Failed Screenshots
