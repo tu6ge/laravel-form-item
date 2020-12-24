@@ -28,6 +28,11 @@
        <whitelist processUncoveredFilesFromWhitelist="true">
            <directory suffix=".php">./src/</directory>
            <directory suffix=".php">./resources/views/</directory>
+           <exclude>
+              <directory suffix=".php">./resources/views/include/</directory>
+              <file>./resources/views/date-picker.blade.php</file>
+              <file>./src/Traits/DateConvert.php</file>
+           </exclude>
        </whitelist>
    </filter>
     <php>
