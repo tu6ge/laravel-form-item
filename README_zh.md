@@ -63,6 +63,8 @@ Route::get('demo', function() {
 </form>
 ```
 
+## 文档
+
 [查看文档](https://tu6ge.github.io/laravel-form-item) 了解更多
 
 ## 测试

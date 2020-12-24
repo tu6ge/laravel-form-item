@@ -65,6 +65,8 @@ In blade file, this have two cases, add data or edit data.Let's introduce them s
 </form>
 ```
 
+## Document
+
 See [docs](https://tu6ge.github.io/laravel-form-item/en)
 
 ## Test
