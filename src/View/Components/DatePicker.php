@@ -9,9 +9,9 @@ class DatePicker extends InputAbstract
 {
     use DateConvert;
 
-   public string $php_value_format = '';
+    public string $php_value_format = '';
 
-   public string $value_format = '';
+    public string $value_format = '';
 
     public function __construct(
         $name,
@@ -26,9 +26,9 @@ class DatePicker extends InputAbstract
 
         $this->php_value_format = $this->elementUI2PHP($valueFormat);
 
-       if (!empty($value)) {
-           $this->value = Carbon::createFromFormat($this->php_value_format, $value)->toIso8601String();
-       }
+        if (!empty($value)) {
+            $this->value = Carbon::createFromFormat($this->php_value_format, $value)->toIso8601String();
+        }
 
         $this->id = $id ?: $this->defaultId();
 
