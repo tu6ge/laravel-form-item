@@ -9,9 +9,9 @@ class DatePicker extends InputAbstract
 {
     use DateConvert;
 
-    public string $php_value_format = '';
+    public $php_value_format = '';
 
-    public string $value_format = '';
+    public $value_format = '';
 
     public function __construct(
         $name,
