@@ -1,9 +1,5 @@
 # Date Picker (beta)
 
-::: warning 注意
-日期选择器还处于测试阶段。如需使用，请阅读源码。
-:::
-
 ## Basic usage
 
 <demo-block>
