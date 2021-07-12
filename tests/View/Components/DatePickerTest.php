@@ -48,10 +48,10 @@ class DatePickerTest extends TestCase
 
         $class->__construct(
             'foo_name',
-            //'foo_value'
+            '2020-10-11',
         );
 
-        $this->assertEquals($class->value, '');
+        $this->assertEquals(substr($class->value, 0, 10), '2020-10-11');
     }
 
     public function testId()
@@ -66,7 +66,7 @@ class DatePickerTest extends TestCase
 
         $class->__construct(
             'foo_name',
-            //'foo_value',
+            '2020-10-11',
             'foo_id'
         );
 
@@ -85,7 +85,7 @@ class DatePickerTest extends TestCase
 
         $class->__construct(
             'foo_name',
-            //'foo_value',
+            '2020-10-11',
             'foo_id',
             'bar_type'
         );
